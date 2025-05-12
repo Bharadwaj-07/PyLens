@@ -1,7 +1,6 @@
 line_profiler
 vulture
 radon
-os
 ast
 sys
 json
