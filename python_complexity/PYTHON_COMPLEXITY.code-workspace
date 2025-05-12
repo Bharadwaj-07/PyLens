@@ -1,0 +1,14 @@
+{
+    "folders": [
+        {
+            "path": "jupyter-profiler-main"
+        },
+        {
+            "path": "python-profiler-viewer"
+        },
+        {
+            "path": "code-analyzer"
+        }
+    ],
+    "settings": {}
+}

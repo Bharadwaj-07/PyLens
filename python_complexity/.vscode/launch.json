@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Extension A (JS)",
+            "type": "extensionHost",
+            "request": "launch",
+            "outFiles": [],
+            "cwd": "${workspaceFolder}/jupyter-profiler-main"
+        },
+        {
+            "name": "Launch Extension B (TS)",
+            "type": "extensionHost",
+            "request": "launch",
+            "preLaunchTask": "npm: watch",
+            "outFiles": [
+                "${workspaceFolder}/python-profiler-viewer/out/**/*.js"
+            ],
+            "cwd": "${workspaceFolder}/python-profiler-viewer"
+        },
+        {
+            "name": "Launch Extension C (TS)",
+            "type": "extensionHost",
+            "request": "launch",
+            "preLaunchTask": "npm: watch-extension-c",
+            "outFiles": [
+                "${workspaceFolder}/code-analyzer/out/**/*.js"
+            ],
+            "cwd": "${workspaceFolder}/code-analyzer"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Launch All Extensions",
+            "configurations": [
+                "Launch Extension A (JS)",
+                "Launch Extension B (TS)",
+                "Launch Extension C (TS)"
+            ]
+        }
+    ]
+}
