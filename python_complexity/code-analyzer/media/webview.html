@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Code Analysis Dashboard</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --primary: #3498db;
+      --danger: #e74c3c;
+      --warning: #f39c12;
+      --success: #2ecc71;
+      --dark: #2c3e50;
+      --light: #ecf0f1;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f8f9fa;
+      color: var(--dark);
+    }
+    .dashboard {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .header {
+      background: linear-gradient(135deg, var(--primary), var(--dark));
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 20px;
+    }
+    .metrics-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .metric-card {
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .metric-value {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .metric-good { color: var(--success); }
+    .metric-warning { color: var(--warning); }
+    .metric-danger { color: var(--danger); }
+    .tree-container {
+      height: 600px;
+      overflow: auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: white;
+    }
+    .node circle {
+      fill: #fff;
+      stroke-width: 2px;
+    }
+    .node text {
+      font: 12px sans-serif;
+    }
+    .link {
+      fill: none;
+      stroke: #ccc;
+      stroke-width: 1.5px;
+    }
+    .node-class circle { stroke: var(--primary); }
+    .node-method circle { stroke: var(--success); }
+    .node-function circle { stroke: var(--warning); }
+    .node-namespace circle { stroke: #95a5a6; }
+    .tooltip {
+      position: absolute;
+      padding: 8px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      border-radius: 4px;
+      pointer-events: none;
+      font-size: 14px;
+    }
+    #details-panel {
+      min-height: 200px;
+    }
+    #tree-container {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 600px;
+  border: 1px solid #ddd;
+}
+
+    .issue-list {
+      margin-top: 10px;
+    }
+
+    .issue-item {
+      padding: 5px;
+      margin: 3px 0;
+      background-color: #f8d7da;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .file-upload {
+      margin-bottom: 20px;
+    }
+    .tab-container {
+      display: flex;
+      margin-bottom: 15px;
+    }
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      background: #e0e0e0;
+      border-radius: 5px 5px 0 0;
+      margin-right: 5px;
+    }
+    .tab.active {
+      background: white;
+      font-weight: bold;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .file-selector {
+      margin-bottom: 15px;
+    }
+    select {
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="header">
+      <h1>Advanced Code Analysis Dashboard</h1>
+    </div>
+
+    <div class="tab-container">
+      <div class="tab active" onclick="switchTab('overview')">Project Overview</div>
+      <div class="tab" onclick="switchTab('structure')">Code Structure</div>
+      <div class="tab" onclick="switchTab('issues')">Issues</div>
+      <div class="tab" onclick="switchTab('files')">File Explorer</div>
+    </div>
+
+    <div id="overview" class="tab-content active">
+      <div class="metrics-container">
+        <div class="metric-card">
+          <h3>Maintainability Index</h3>
+          <div id="miValue" class="metric-value">--</div>
+          <div id="miStatus">Not analyzed</div>
+          <canvas id="miChart" height="150"></canvas>
+        </div>
+        <div class="metric-card">
+          <h3>Reusability Score</h3>
+          <div id="reuseValue" class="metric-value">--</div>
+          <div id="reuseStatus">Not analyzed</div>
+          <canvas id="reuseChart" height="150"></canvas>
+        </div>
+        <div class="metric-card">
+          <h3>Carbon Footprint</h3>
+          <div id="carbonValue" class="metric-value">--</div>
+          <div id="carbonStatus">Not analyzed</div>
+          <canvas id="carbonChart" height="150"></canvas>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h2>Code Smell Distribution</h2>
+          <canvas id="smellChart" height="300"></canvas>
+        </div>
+        <div class="card">
+          <h2>Project Statistics</h2>
+          <div id="projectStats"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="structure" class="tab-content">
+      <div class="card">
+        <h2>Code Structure Tree</h2>
+        <div class="file-selector">
+          <select id="fileSelector" onchange="loadSelectedFile()">
+            <option value="">Select a file to analyze</option>
+          </select>
+        </div>
+        <div class="tree-container" id="tree-container"></div>
+        <div id="details-panel" class="card">
+          <h3>Selected Item Details</h3>
+          <div id="details-content">
+            <p>Select a file and click on any node in the tree to view detailed analysis</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="issues" class="tab-content">
+      <div class="card">
+        <h2>Code Issues Summary</h2>
+        <div id="issues-content"></div>
+      </div>
+    </div>
+
+    <div id="files" class="tab-content">
+      <div class="card">
+        <h2>File Explorer</h2>
+        <div id="file-explorer"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tooltip"></div>
+
+  <script>
+    // Global analysis data
+    let analysisData = null;
+    let charts = {};
+    let currentFileData = null;
+
+    /*__DATA__*/
+
+    // If analysisData is injected, initialize dashboard automatically
+    if (typeof data !== 'undefined') {
+      analysisData = data;
+      initializeDashboard();
+    }
+
+    // Tab switching
+    function switchTab(tabName) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+      
+      document.querySelector(`.tab[onclick="switchTab('${tabName}')"]`).classList.add('active');
+      document.getElementById(tabName).classList.add('active');
+    }
+
+    // File loading
+    function loadFile() {
+      // const fileInput = document.getElementById('jsonFile');
+      analysisData = '/DATA/';
+      const file = fileInput.files[0];
+      
+      if (!file) {
+        alert('Please select a JSON file first');
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          analysisData = JSON.parse(e.target.result);
+          initializeDashboard();
+        } catch (error) {
+          alert('Error parsing JSON file: ' + error.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    // Initialize all dashboard components
+    function initializeDashboard() {
+      if (!analysisData) return;
+      
+      // Update metrics
+      updateMetrics();
+      
+      // Create charts
+      createCharts();
+      
+      // Create file selector
+      populateFileSelector();
+      
+      // Create issues list
+      createIssuesList();
+      
+      // Create file explorer
+      createFileExplorer();
+    }
+
+    // Update metric cards with project summary
+    function updateMetrics() {
+      const summary = analysisData.summary;
+      
+      // Maintainability Index
+      document.getElementById('miValue').textContent = summary.maintainabilityIndex.toFixed(2);
+      document.getElementById('miValue').className = `metric-value ${getMetricClass(summary.maintainabilityIndex, 65, 85)}`;
+      document.getElementById('miStatus').textContent = getMetricStatus(summary.maintainabilityIndex, 65, 85, 'Maintainability');
+      
+      // Reusability Score
+      document.getElementById('reuseValue').textContent = summary.reusabilityScore.toFixed(2);
+      document.getElementById('reuseValue').className = `metric-value ${getMetricClass(summary.reusabilityScore, 60, 80)}`;
+      document.getElementById('reuseStatus').textContent = getMetricStatus(summary.reusabilityScore, 60, 80, 'Reusability');
+      
+      // Carbon Footprint
+      document.getElementById('carbonValue').textContent = summary.carbonFootprint.toFixed(2);
+      document.getElementById('carbonValue').className = `metric-value ${getMetricClass(summary.carbonFootprint, 5, 2, true)}`;
+      document.getElementById('carbonStatus').textContent = getMetricStatus(summary.carbonFootprint, 5, 2, 'Carbon Footprint', true);
+      
+      // Project stats
+      document.getElementById('projectStats').innerHTML = `
+        <p><strong>Project:</strong> ${analysisData.projectName}</p>
+        <p><strong>Files Analyzed:</strong> ${summary.totalFiles}</p>
+        <p><strong>Total Lines of Code:</strong> ${summary.totalLines}</p>
+        <p><strong>Total Classes:</strong> ${summary.totalClasses}</p>
+        <p><strong>Total Functions/Methods:</strong> ${summary.totalFunctions}</p>
+      `;
+    }
+
+    function getMetricClass(value, warnThreshold, goodThreshold, reverse = false) {
+      if (reverse) {
+        return value <= goodThreshold ? 'metric-good' : 
+               value <= warnThreshold ? 'metric-warning' : 'metric-danger';
+      }
+      return value >= goodThreshold ? 'metric-good' : 
+             value >= warnThreshold ? 'metric-warning' : 'metric-danger';
+    }
+
+    function getMetricStatus(value, warnThreshold, goodThreshold, name, reverse = false) {
+      if (reverse) {
+        return value <= goodThreshold ? `✅ Excellent ${name}` : 
+               value <= warnThreshold ? `⚠️ Moderate ${name}` : `❌ Poor ${name}`;
+      }
+      return value >= goodThreshold ? `✅ Excellent ${name}` : 
+             value >= warnThreshold ? `⚠️ Moderate ${name}` : `❌ Poor ${name}`;
+    }
+
+    // Create all charts
+    function createCharts() {
+      // Destroy existing charts
+      Object.values(charts).forEach(chart => chart.destroy());
+      charts = {};
+      
+      // Code Smell Distribution Chart
+      const smellCtx = document.getElementById('smellChart').getContext('2d');
+      const smellTypes = analysisData.summary.smells.map(s => s.type);
+      const smellColors = [
+        '#e74c3c', // red
+        '#f39c12', // orange
+        '#3498db', // blue
+        '#9b59b6', // purple
+        '#1abc9c', // teal
+        '#2ecc71', // green
+        '#e67e22', // dark orange
+        '#34495e'  // dark blue/gray
+      ];
+      charts.smellChart = new Chart(smellCtx, {
+        type: 'doughnut',
+        data: {
+          labels: smellTypes,
+          datasets: [{
+            data: analysisData.summary.smells.map(s => s.count),
+            backgroundColor: smellTypes.map((_, i) => smellColors[i % smellColors.length]),
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'right' },
+            tooltip: { callbacks: { label: ctx => `${ctx.label}: ${ctx.raw} instances` } }
+          }
+        }
+      });
+      
+      // Metric charts (small)
+      createMetricChart('miChart', analysisData.summary.maintainabilityIndex, 65, 85, 'Maintainability');
+      createMetricChart('reuseChart', analysisData.summary.reusabilityScore, 60, 80, 'Reusability');
+      createMetricChart('carbonChart', analysisData.summary.carbonFootprint, 5, 2, 'Carbon Footprint', true);
+    }
+
+    function createMetricChart(canvasId, value, warnThreshold, goodThreshold, label, reverse = false) {
+      const ctx = document.getElementById(canvasId).getContext('2d');
+      const max = reverse ? Math.max(10, value * 1.5) : 100;
+      
+      charts[canvasId] = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: [label],
+          datasets: [{
+            data: [value],
+            backgroundColor: [
+              getMetricColor(value, warnThreshold, goodThreshold, reverse)
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          indexAxis: 'y',
+          scales: {
+            x: { 
+              min: 0,
+              max: max,
+              title: { display: true, text: 'Score' }
+            }
+          },
+          plugins: {
+            legend: { display: false },
+            tooltip: { callbacks: { 
+              title: () => '',
+              label: ctx => `${label}: ${ctx.raw.toFixed(2)}`
+            } }
+          }
+        }
+      });
+    }
+
+    function getMetricColor(value, warnThreshold, goodThreshold, reverse = false) {
+      if (reverse) {
+        return value <= goodThreshold ? '#2ecc71' : 
+               value <= warnThreshold ? '#f39c12' : '#e74c3c';
+      }
+      return value >= goodThreshold ? '#2ecc71' : 
+             value >= warnThreshold ? '#f39c12' : '#e74c3c';
+    }
+
+    // Populate file selector dropdown with folder grouping
+    
+   currentFileData = null;
+
+  function normalizePath(p) {
+    return p.replace(/\\/g, '/');
+  }
+
+  function getFolderStructure(path) {
+    const parts = normalizePath(path).split('/');
+    parts.pop(); // remove file name
+    return parts.join('/') || '/';
+  }
+
+  function populateFileSelector() {
+    const selector = document.getElementById('fileSelector');
+    selector.innerHTML = '<option value="">Select a file to analyze</option>';
+    const folders = {};
+
+    analysisData.files.forEach(file => {
+      const folder = getFolderStructure(file.path);
+      if (!folders[folder]) folders[folder] = [];
+      folders[folder].push(file);
+    });
+
+    Object.entries(folders).forEach(([folder, files]) => {
+      const optgroup = document.createElement('optgroup');
+      optgroup.label = folder;
+      files.forEach(file => {
+        const option = document.createElement('option');
+        option.value = file.path;
+        option.textContent = file.fileName;
+        optgroup.appendChild(option);
+      });
+      selector.appendChild(optgroup);
+    });
+  }
+
+  function loadSelectedFile() {
+    const selector = document.getElementById('fileSelector');
+    const selectedPath = selector.value;
+
+    if (!selectedPath) {
+      currentFileData = null;
+      document.getElementById('tree-container').innerHTML = '';
+      document.getElementById('details-content').innerHTML =
+        '<p>Select a file and click on any node in the tree to view detailed analysis</p>';
+      return;
+    }
+
+    currentFileData = analysisData.files.find(f => f.path === selectedPath);
+    if (currentFileData) {
+      createTreeVisualization(currentFileData);
+    }
+  }
+
+  function createTreeVisualization(fileData) {
+    const container = document.getElementById('tree-container');
+    container.innerHTML = '';
+
+    const classMap = {};
+    const globalFunctions = [];
+
+    fileData.complexity.forEach(item => {
+      if (item.class) {
+        if (!classMap[item.class]) classMap[item.class] = [];
+        classMap[item.class].push(item);
+      } else {
+        globalFunctions.push(item);
+      }
+    });
+
+    const treeData = {
+      name: fileData.fileName,
+      type: "file",
+      children: [
+        {
+          name: "<global>",
+          type: "namespace",
+          children: globalFunctions.map(f => ({
+            name: f.name,
+            type: "function",
+            ...f
+          }))
+        },
+        ...Object.entries(classMap).map(([className, methods]) => ({
+          name: className,
+          type: "class",
+          children: methods.map(m => ({
+            name: m.name,
+            type: "method",
+            ...m
+          }))
+        }))
+      ]
+    };
+
+    const root = d3.hierarchy(treeData);
+    propagateIssuesOnHierarchy(root);
+
+    const treeLayout = d3.tree().nodeSize([40, 180]);
+    treeLayout(root);
+
+    const nodes = root.descendants();
+    const links = root.links();
+
+    const minX = Math.min(...nodes.map(n => n.x));
+    const maxX = Math.max(...nodes.map(n => n.x));
+    const minY = Math.min(...nodes.map(n => n.y));
+    const maxY = Math.max(...nodes.map(n => n.y));
+    const margin = { top: 40, right: 120, bottom: 40, left: 120 };
+    const width = Math.max(1200, maxY - minY + margin.left + margin.right);
+    const height = maxX - minX + margin.top + margin.bottom;
+
+    const svg = d3.select("#tree-container")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .append("g")
+      .attr("transform", `translate(${margin.left - minY},${margin.top - minX})`);
+
+    svg.selectAll(".link")
+      .data(links)
+      .enter().append("path")
+      .attr("class", "link")
+      .attr("fill", "none")
+      .attr("stroke", "#ccc")
+      .attr("stroke-width", 2)
+      .attr("d", d3.linkHorizontal().x(d => d.y).y(d => d.x));
+
+    const node = svg.selectAll(".node")
+      .data(nodes)
+      .enter().append("g")
+      .attr("class", d => `node node-${d.data.type}`)
+      .attr("transform", d => `translate(${d.y},${d.x})`)
+      .on("click", (event, d) => showNodeDetails(d.data));
+
+    node.append("circle")
+      .attr("r", 10)
+      .attr("fill", d => {
+        if (!d.data.issues || d.issueCount === 0) return "#fff";
+        if (d.issueCount <= 2) return "#ffe082";
+        if (d.issueCount <= 5) return "#ffb300";
+        return "#e74c3c";
+      })
+      .attr("stroke", d => {
+        switch (d.data.type) {
+          case "class": return "var(--primary)";
+          case "method": return "var(--success)";
+          case "function": return "var(--warning)";
+          default: return "#95a5a6";
+        }
+      })
+      .attr("stroke-width", 2);
+
+    node.append("text")
+      .attr("dy", ".35em")
+      .attr("x", d => d.children ? -15 : 15)
+      .attr("text-anchor", d => d.children ? "end" : "start")
+      .text(d => {
+        let label = d.data.name;
+        if (typeof d.data.value === "number") label += ` (${d.data.value})`;
+        if (d.issueCount && d.issueCount > 0) label += ` ⚠️${d.issueCount}`;
+        return label;
+      });
+
+    const tooltip = d3.select(".tooltip");
+    node.on("mouseover", (event, d) => {
+      tooltip.transition().duration(200).style("opacity", 0.9);
+      tooltip.html(`<strong>${d.data.name}</strong><br>Type: ${d.data.type}`)
+        .style("left", `${event.pageX + 10}px`)
+        .style("top", `${event.pageY - 28}px`);
+    }).on("mouseout", () => {
+      tooltip.transition().duration(500).style("opacity", 0);
+    });
+
+    function propagateIssues(node) {
+      let issues = [];
+      if (node.children) {
+        node.children.forEach(child => {
+          issues = issues.concat(propagateIssues(child));
+        });
+      }
+      if (node.issues) issues = issues.concat(node.issues);
+      node.issues = [...new Set(issues)];
+      node.issueCount = node.issues.length;
+      return node.issues;
+    }
+
+    function propagateIssuesOnHierarchy(d3Root) {
+      function walk(node) {
+        if (node.children) node.children.forEach(walk);
+        node.issues = node.data.issues || [];
+      }
+      walk(d3Root);
+      propagateIssues(d3Root);
+    }
+  }
+
+  function showNodeDetails(data) {
+    const panel = document.getElementById('details-content');
+    panel.innerHTML = `
+      <h4>${data.name} (${data.type})</h4>
+      ${data.value ? `<p><strong>Complexity:</strong> ${data.value}</p>` : ''}
+      ${data.issues && data.issues.length ? `
+        <div class="issue-list">
+          <h5>Issues:</h5>
+          ${data.issues.map(issue => `<div class="issue-item">⚠️ ${issue}</div>`).join('')}
+        </div>
+      ` : '<p>No issues detected</p>'}
+    `;
+  }
+
+  function createFileExplorer() {
+    const explorer = document.getElementById('file-explorer');
+    const folders = {};
+
+    analysisData.files.forEach(file => {
+      const folder = getFolderStructure(file.path);
+      if (!folders[folder]) folders[folder] = [];
+      folders[folder].push(file);
+    });
+
+    let html = '<ul>';
+    Object.entries(folders).forEach(([folder, files]) => {
+      html += `<li><strong>${folder}</strong><ul>`;
+      files.forEach(file => {
+        const issueCount = (file.smells?.length || 0) + (file.deadCode?.length || 0);
+        const color = issueCount > 5 ? 'var(--danger)' : issueCount > 0 ? 'var(--warning)' : 'var(--success)';
+        html += `
+          <li>
+            
+              ${file.fileName}
+            </span>
+            <span style="font-size:0.8em;color:${color}">
+              (${issueCount} issues, MI: ${file.maintainabilityIndex?.toFixed(2)})
+            </span>
+          </li>
+        `;
+      });
+      html += '</ul></li>';
+    });
+    html += '</ul>';
+    explorer.innerHTML = html;
+  }
+
+  function loadFileInViewer(filePath) {
+    const selector = document.getElementById('fileSelector');
+    // Normalize both filePath and selector options for matching
+    const normalizedPath = normalizePath(filePath);
+    let found = false;
+    for (let i = 0; i < selector.options.length; i++) {
+      if (normalizePath(selector.options[i].value) === normalizedPath) {
+        selector.selectedIndex = i;
+        found = true;
+        break;
+      }
+    }
+    if (!found) {
+      selector.value = filePath; // fallback
+    }
+    switchTab('structure');
+    loadSelectedFile();
+  }
+
+    // Create issues list
+    function createIssuesList() {
+  const issuesContent = document.getElementById('issues-content');
+  issuesContent.innerHTML = ''; // Clear existing content
+
+  const issuesByType = {};
+  const seen = new Set();
+
+  analysisData.files.forEach(file => {
+    // Track which issues have already been added for this file
+    const localSeen = new Set();
+    // Add code smells (only if line is present)
+    file.smells.forEach(smell => {
+      if (smell.line && smell.line !== 'N/A' && smell.line !== null && smell.line !== undefined) {
+        const key = `smell|${file.path}|${smell.line}|${smell.type}|${smell.message}`;
+        if (!seen.has(key) && !localSeen.has(key)) {
+          seen.add(key);
+          localSeen.add(key);
+          if (!issuesByType[smell.type]) issuesByType[smell.type] = [];
+          issuesByType[smell.type].push({
+            message: smell.message,
+            file: file.path,
+            line: smell.line
+          });
+        }
+      }
+    });
+    // Add dead code (only if contains 'method')
+    file.deadCode.forEach(dead => {
+      if (typeof dead === 'string' && dead.toLowerCase().includes('method')) {
+        const key = `dead|${file.path}|${dead}`;
+        if (!seen.has(key) && !localSeen.has(key)) {
+          seen.add(key);
+          localSeen.add(key);
+          if (!issuesByType['Dead Code']) issuesByType['Dead Code'] = [];
+          issuesByType['Dead Code'].push({
+            message: dead,
+            file: file.path,
+            line: 'N/A'
+          });
+        }
+      }
+    });
+    // Add complexity issues (only if line is present)
+    file.complexity.forEach(item => {
+      if (item.issues && item.issues.length && item.line && item.line !== 'N/A' && item.line !== null && item.line !== undefined) {
+        item.issues.forEach(issue => {
+          const name = item.class ? `${item.class}.${item.name}()` : item.name;
+          const key = `complexity|${file.path}|${issue}|${name}`;
+          if (!seen.has(key) && !localSeen.has(key)) {
+            seen.add(key);
+            localSeen.add(key);
+            if (!issuesByType[issue]) issuesByType[issue] = [];
+            issuesByType[issue].push({
+              message: name,
+              file: file.path,
+              line: item.line
+            });
+          }
+        });
+      }
+    });
+  });
+
+  // Render issues, but filter duplicates: prefer entry with line number
+  const filteredIssuesByType = {};
+  Object.entries(issuesByType).forEach(([type, items]) => {
+    const unique = {};
+    items.forEach(item => {
+      // Use file+message as key, prefer line number if available
+      const key = `${item.file}|${item.message}`;
+      if (!unique[key]) {
+        unique[key] = item;
+      } else {
+        // If one has a line number and the other doesn't, keep the one with line
+        if (item.line !== 'N/A' && (unique[key].line === 'N/A' || unique[key].line == null)) {
+          unique[key] = item;
+        }
+      }
+    });
+    // Remove duplicates based on file path and message (ignore line number differences)
+    const deduped = Object.values(unique).reduce((acc, curr) => {
+      const fileKey = `${curr.file}|${curr.message}`;
+      if (!acc[fileKey]) {
+        acc[fileKey] = curr;
+      }
+      return acc;
+    }, {});
+    filteredIssuesByType[type] = Object.values(deduped);
+  });
+
+  // Define a palette for up to 8 unique issue types
+  const issueColors = [
+    '#e74c3c', // red
+    '#f39c12', // orange
+    '#3498db', // blue
+    '#9b59b6', // purple
+    '#1abc9c', // teal
+    '#2ecc71', // green
+    '#e67e22', // dark orange
+    '#34495e'  // dark blue/gray
+  ];
+  // Map issue types to colors
+  const typeColorMap = {};
+  let colorIdx = 0;
+  Object.keys(filteredIssuesByType).forEach(type => {
+    typeColorMap[type] = issueColors[colorIdx % issueColors.length];
+    colorIdx++;
+  });
+
+  issuesContent.innerHTML = Object.entries(filteredIssuesByType)
+    .map(([type, items]) => {
+      const color = typeColorMap[type] || 'var(--primary)';
+      return `
+      <div class="card" style="margin-bottom: 15px;">
+        <h3>${type} (${items.length})</h3>
+        <ul>
+          ${items.map(item => `
+            <li>
+              <span style="color:${color};cursor:pointer;" 
+                    onclick="navigateToIssue('${item.file}', ${JSON.stringify(item.line)})">
+                ${item.file}${item.line !== 'N/A' ? `:${item.line}` : ''}
+              </span>
+              - ${item.message}
+            </li>
+          `).join('')}
+        </ul>
+      </div>
+    `;
+    })
+    .join('');
+}
+
+    // Navigate to specific issue in file
+    function navigateToIssue(filePath, lineNumber) {
+      const selector = document.getElementById('fileSelector');
+      selector.value = filePath;
+      loadSelectedFile();
+      switchTab('structure');
+      // Note: Actual line highlighting would require more advanced implementation
+    }
+  </script>
+</body>
+</html>
+`
