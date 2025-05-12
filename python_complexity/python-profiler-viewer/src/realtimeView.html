@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Profiler - Realtime Monitor</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        :root {
+        --primary-color: #4285f4;
+        --secondary-color: #34a853;
+        --accent-color: #ea4335;
+        --background-color: #f8f9fa;
+        --card-bg: #ffffff;
+        --text-primary: #202124;
+        --text-secondary: #5f6368;
+        }
+        body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: var(--background-color);
+        color: var(--text-primary);
+        }
+        .dashboard {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .chart-container {
+        background: var(--card-bg);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        border: 1px solid rgba(0,0,0,0.05);
+        }
+        .chart-row {
+            display: flex;
+            gap: 20px;
+        }
+        .chart-wrapper {
+            flex: 1;
+        }
+        h1 {
+        color: var(--text-primary);
+        text-align: center;
+        margin-bottom: 25px;
+        font-weight: 500;
+        font-size: 1.8rem;
+        letter-spacing: -0.5px;
+        }
+        h2 {
+        color: var(--primary-color);
+        margin-top: 0;
+        font-size: 1.1rem;
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 15px;
+        }
+        .chart {
+            height: 300px;
+        }
+        .active-functions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 15px;
+        min-height: 50px;
+        padding: 10px;
+        background: rgba(248, 249, 250, 0.7);
+        border-radius: 8px;
+        border: 1px dashed rgba(0,0,0,0.1);
+        }
+        .function-tag {
+        background: linear-gradient(135deg, #e8f0fe 0%, #d2e3fc 100%);
+        padding: 6px 12px;
+        border-radius: 18px;
+        font-size: 12px;
+        color: var(--primary-color);
+        font-weight: 500;
+        box-shadow: 0 2px 4px rgba(66,133,244,0.1);
+        border: 1px solid rgba(66,133,244,0.2);
+        }
+        .status-bar {
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        }
+
+        .status-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+        }
+
+        .status-value {
+        font-weight: 600;
+        font-size: 20px;
+        color: var(--primary-color);
+        }
+
+        .status-label {
+        font-size: 13px;
+        color: var(--text-secondary);
+        margin-top: 4px;
+        }
+        .axis path,
+        .axis line {
+        stroke: #dfe1e5;
+        shape-rendering: crispEdges;
+        }
+
+        .axis text {
+        fill: var(--text-secondary);
+        font-size: 11px;
+        }
+        .axis-label {
+            font-size: 12px;
+            fill: #666;
+            font-weight: bold;
+        }
+        .line {
+            fill: none;
+            stroke-width: 2px;
+        }
+        .cpu-line {
+        stroke: var(--accent-color);
+        stroke-width: 2.5px;
+        }
+
+        .mem-line {
+        stroke: var(--secondary-color);
+        stroke-width: 2.5px;
+        }
+        .area {
+            opacity: 0.2;
+        }
+        .cpu-area {
+        fill: url(#cpu-gradient);
+        }
+
+        .mem-area {
+        fill: url(#mem-gradient);
+        }
+        .zoom-rect {
+            fill: none;
+            pointer-events: all;
+        }
+        .zoom-controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .zoom-btn {
+        padding: 6px 16px;
+        background: linear-gradient(135deg, #f1f3f4 0%, #e8eaed 100%);
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 13px;
+        color: var(--text-secondary);
+        transition: all 0.2s ease;
+        }
+        .zoom-btn:hover {
+        background: linear-gradient(135deg, #e8eaed 0%, #d5d7da 100%);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Python Profiler - Realtime Monitor</h1>
+        
+        <div class="status-bar">
+            <div class="status-item">
+                <div class="status-value" id="current-cpu">0.0</div>
+                <div class="status-label">CPU Usage (%)</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value" id="current-mem">0.0</div>
+                <div class="status-label">Memory Usage (MB)</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value" id="active-count">0</div>
+                <div class="status-label">Active Functions</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value" id="last-update">-</div>
+                <div class="status-label">Last Update</div>
+            </div>
+        </div>
+        
+        <div class="chart-row">
+            <div class="chart-wrapper">
+                <div class="chart-container">
+                    <h2>CPU Usage Over Time</h2>
+                    <div class="chart" id="cpu-chart"></div>
+                    <div class="zoom-controls">
+                        <button class="zoom-btn" id="reset-cpu">Default View</button>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-wrapper">
+                <div class="chart-container">
+                    <h2>Memory Usage Over Time</h2>
+                    <div class="chart" id="mem-chart"></div>
+                    <div class="zoom-controls">
+                        <button class="zoom-btn" id="reset-mem">Default View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <h2>Currently Active Functions</h2>
+            <div class="active-functions" id="active-functions"></div>
+        </div>
+    </div>
+
+    <script>
+        // Dimensions and margins
+        const margin = {top: 20, right: 30, bottom: 60, left: 50};
+        const width = 600 - margin.left - margin.right;
+        const height = 300 - margin.top - margin.bottom;
+        
+        // Store the full dataset and zoom state
+        let fullData = [];
+        let currentZoomState = null;
+        
+        // Initialize CPU chart
+        const cpuSvg = d3.select("#cpu-chart")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+            // Add CPU clip path (INSERT HERE)
+        cpuSvg.append("defs").append("clipPath")
+            .attr("id", "clip-cpu")
+            .append("rect")
+            .attr("width", width)
+            .attr("height", height);
+        
+        cpuSvg.append("defs").append("linearGradient")
+        .attr("id", "cpu-gradient")
+        .attr("x1", "0%").attr("y1", "0%")
+        .attr("x2", "0%").attr("y2", "100%")
+        .selectAll("stop")
+        .data([
+            {offset: "0%", color: "rgba(234, 67, 53, 0.3)"},
+            {offset: "100%", color: "rgba(234, 67, 53, 0.05)"}
+        ])
+        .enter().append("stop")
+        .attr("offset", d => d.offset)
+        .attr("stop-color", d => d.color);
+
+        
+        // Initialize Memory chart
+        const memSvg = d3.select("#mem-chart")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Add Memory clip path (INSERT HERE)
+        memSvg.append("defs").append("clipPath")
+            .attr("id", "clip-mem")
+            .append("rect")
+            .attr("width", width)
+            .attr("height", height);
+        
+        // For Memory chart
+        memSvg.append("defs").append("linearGradient")
+            .attr("id", "mem-gradient")
+            .attr("x1", "0%").attr("y1", "0%")
+            .attr("x2", "0%").attr("y2", "100%")
+            .selectAll("stop")
+            .data([
+                {offset: "0%", color: "rgba(52, 168, 83, 0.3)"},
+                {offset: "100%", color: "rgba(52, 168, 83, 0.05)"}
+            ])
+            .enter().append("stop")
+            .attr("offset", d => d.offset)
+            .attr("stop-color", d => d.color);
+                
+        // Scales
+        const x = d3.scaleTime().range([0, width]);
+        const yCpu = d3.scaleLinear().range([height, 0]);
+        const yMem = d3.scaleLinear().range([height, 0]);
+
+                // Add this near the top with other constants
+        const customTimeFormat = (date) => {
+            const seconds = d3.timeFormat("%S")(date);
+            return seconds === "00" ? d3.timeFormat("%H:%M")(date) : d3.timeFormat("%H:%M:%S")(date);
+        };
+                
+
+        // In line/area definitions:
+        const cpuLine = d3.line()
+            .x(d => x(parseTimestamp(d.timestamp)))
+            .y(d => yCpu(d.cpu));
+
+        const memLine = d3.line()
+            .x(d => x(parseTimestamp(d.timestamp)))
+            .y(d => yMem(d.mem));
+
+        const cpuArea = d3.area()
+            .x(d => x(parseTimestamp(d.timestamp)))
+            .y0(height)
+            .y1(d => yCpu(d.cpu));
+
+        const memArea = d3.area()
+            .x(d => x(parseTimestamp(d.timestamp)))
+            .y0(height)
+            .y1(d => yMem(d.mem));
+        
+        // CPU content group with clipping
+        const cpuContent = cpuSvg.append("g")
+            .attr("clip-path", "url(#clip-cpu)");
+
+        cpuContent.append("path")
+            .attr("class", "area cpu-area")
+            .attr("d", cpuArea([]));
+            
+        cpuContent.append("path")
+            .attr("class", "line cpu-line")
+            .attr("d", cpuLine([]));
+
+        // Memory content group with clipping
+        const memContent = memSvg.append("g")
+            .attr("clip-path", "url(#clip-mem)");
+
+        memContent.append("path")
+            .attr("class", "area mem-area")
+            .attr("d", memArea([]));
+            
+        memContent.append("path")
+            .attr("class", "line mem-line")
+            .attr("d", memLine([]));
+        
+
+        // Add axes to both charts
+        cpuSvg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", `translate(0,${height})`);
+            
+        cpuSvg.append("g")
+            .attr("class", "y axis");
+            
+        memSvg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", `translate(0,${height})`);
+            
+        memSvg.append("g")
+            .attr("class", "y axis");
+            
+        
+        // Add axis labels to CPU chart
+        cpuSvg.append("text")
+            .attr("class", "axis-label")
+            .attr("transform", `translate(${width / 2},${height + margin.bottom})`)
+            .style("text-anchor", "middle")
+            .style("font-weight", "bold")
+            .text("Time");
+
+        cpuSvg.append("text")
+            .attr("class", "axis-label")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 0 - margin.left)
+            .attr("x", 0 - (height / 2))
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .style("font-weight", "bold")
+            .text("CPU Usage (%)");
+        
+        // Add axis labels to Memory chart
+        memSvg.append("text")
+            .attr("class", "axis-label")
+            .attr("transform", `translate(${width / 2},${height + margin.bottom})`)
+            .style("text-anchor", "middle")
+            .text("Time");
+            
+        memSvg.append("text")
+            .attr("class", "axis-label")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 0 - margin.left)
+            .attr("x", 0 - (height / 2))
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .text("Memory Usage (MB)");
+        
+        // Update the zoom behavior to constrain panning
+        // const zoom = d3.zoom()
+        //     .scaleExtent([1, 10])
+        //     .translateExtent([[0, 0], [width, height]])
+        //     .extent([[0, 0], [width, height]])
+        //     .on("zoom", zoomed);
+                
+                // Add these instead:
+        const cpuZoom = d3.zoom()
+            .scaleExtent([1, 10])
+            .translateExtent([[0, 0], [width, height]])
+            .extent([[0, 0], [width, height]])
+            .on("zoom", cpuZoomed);
+
+        const memZoom = d3.zoom()
+            .scaleExtent([1, 10])
+            .translateExtent([[0, 0], [width, height]])
+            .extent([[0, 0], [width, height]])
+            .on("zoom", memZoomed);
+
+        // Add zoomable area to both charts
+        cpuSvg.append("rect")
+            .attr("class", "zoom-rect")
+            .attr("width", width)
+            .attr("height", height)
+            .style("opacity", 0)
+            .call(cpuZoom);
+        
+        memSvg.append("rect")
+            .attr("class", "zoom-rect")
+            .attr("width", width)
+            .attr("height", height)
+            .style("opacity", 0)
+            .call(memZoom);
+        
+        // Handle messages from extension
+        window.addEventListener('message', event => {
+            const message = event.data;
+            if (message.command === 'updateData') {
+                updateVisualization(message.data);
+            }
+        });
+        
+        // Zoom button event handlers
+        document.getElementById('reset-cpu').addEventListener('click', () => resetZoom('cpu'));
+        
+        document.getElementById('reset-mem').addEventListener('click', () => resetZoom('mem'));
+        
+        function zoomChart(scaleFactor, chartType) {
+            const svg = chartType === 'cpu' ? cpuSvg : memSvg;
+            const currentTransform = d3.zoomTransform(svg.node());
+            const newTransform = currentTransform.scale(scaleFactor);
+            svg.transition().call(zoom.transform, newTransform);
+        }
+        
+        function resetZoom(chartType) {
+            const svg = chartType === 'cpu' ? cpuSvg : memSvg;
+            const zoom = chartType === 'cpu' ? cpuZoom : memZoom;
+            
+            svg.transition()
+                .duration(250)
+                .call(zoom.transform, d3.zoomIdentity);
+            
+            if (chartType === 'cpu') {
+                updateCpuAxes(x);
+                cpuContent.select(".cpu-line").attr("d", cpuLine.x(d => x(parseTimestamp(d.timestamp)))(fullData));
+                cpuContent.select(".cpu-area").attr("d", cpuArea.x(d => x(parseTimestamp(d.timestamp)))(fullData));
+            } else {
+                updateMemAxes(x);
+                memContent.select(".mem-line").attr("d", memLine.x(d => x(parseTimestamp(d.timestamp)))(fullData));
+                memContent.select(".mem-area").attr("d", memArea.x(d => x(parseTimestamp(d.timestamp)))(fullData));
+            }
+        }
+        // Helper function to parse timestamp consistently
+        function parseTimestamp(timestamp) {
+            // Use today's date with the timestamp's time component
+            const today = new Date().toISOString().split('T')[0];
+            return new Date(`${today}T${timestamp}`);
+        }
+        // Remove the current zoomed function and replace with:
+
+        function cpuZoomed(event) {
+            const transform = event.transform;
+            const constrainedTransform = constrainTransform(transform, width, height);
+            
+            const newX = constrainedTransform.rescaleX(x);
+            
+            // Update CPU axes and content only
+            cpuSvg.select(".x.axis").call(
+                d3.axisBottom(newX)
+                    .ticks(d3.timeSecond.every(0.1))
+                    .tickFormat(customTimeFormat)
+            );
+            
+            // Update using the same time parsing
+            cpuContent.select(".cpu-line").attr("d", cpuLine.x(d => newX(parseTimestamp(d.timestamp)))(fullData));
+            cpuContent.select(".cpu-area").attr("d", cpuArea.x(d => newX(parseTimestamp(d.timestamp)))(fullData));
+            
+            cpuSvg.selectAll(".x.axis text")
+                .attr("transform", "rotate(-45)")
+                .attr("dx", "-0.8em")
+                .attr("dy", "0.15em")
+                .style("text-anchor", "end");
+        }
+
+        function memZoomed(event) {
+            const transform = event.transform;
+            const constrainedTransform = constrainTransform(transform, width, height);
+            
+            const newX = constrainedTransform.rescaleX(x);
+            
+            // Update Memory axes and content only
+            memSvg.select(".x.axis").call(
+                d3.axisBottom(newX)
+                    .ticks(d3.timeSecond.every(0.1))
+                    .tickFormat(customTimeFormat)
+            );
+            
+            // Update using the same time parsing
+            memContent.select(".mem-line").attr("d", memLine.x(d => newX(parseTimestamp(d.timestamp)))(fullData));
+            memContent.select(".mem-area").attr("d", memArea.x(d => newX(parseTimestamp(d.timestamp)))(fullData));
+            
+            memSvg.selectAll(".x.axis text")
+                .attr("transform", "rotate(-45)")
+                .attr("dx", "-0.8em")
+                .attr("dy", "0.15em")
+                .style("text-anchor", "end");
+        }
+
+        function constrainTransform(transform, width, height) {
+            // Get current transform values
+            let {x: tx, y: ty, k: scale} = transform;
+            
+            // Calculate the scaled dimensions
+            const scaledWidth = width * scale;
+            const scaledHeight = height * scale;
+            
+            // Constrain x translation (left/right bounds)
+            const maxTx = 0;
+            const minTx = width - scaledWidth;
+            tx = Math.min(maxTx, Math.max(minTx, tx));
+            
+            // Constrain y translation (top/bottom bounds)
+            const maxTy = 0;
+            const minTy = height - scaledHeight;
+            ty = Math.min(maxTy, Math.max(minTy, ty));
+            
+            // Return the constrained transform
+            return d3.zoomIdentity.translate(tx, ty).scale(scale);
+        }
+        
+        function updateCpuAxes(newX) {
+            cpuSvg.select(".x.axis").call(
+                d3.axisBottom(newX)
+                    .ticks(d3.timeSecond.every(0.1))
+                    .tickFormat(customTimeFormat)
+            );
+            
+            cpuSvg.select(".y.axis").call(
+                d3.axisLeft(yCpu)
+                    .tickValues([0, 20, 40, 60, 80, 100])
+                    .tickFormat(d => d + "%")
+            );
+        }
+
+        function updateMemAxes(newX) {
+            memSvg.select(".x.axis").call(
+                d3.axisBottom(newX)
+                    .ticks(d3.timeSecond.every(0.1))
+                    .tickFormat(customTimeFormat)
+            );
+            
+            const memDomain = yMem.domain();
+            memSvg.select(".y.axis").call(
+                d3.axisLeft(yMem)
+                    .tickValues(d3.range(0, memDomain[1] + memDomain[1]/10, memDomain[1]/5))
+            );
+        }
+        function updateVisualization(data) {
+            if (!data || data.length === 0) return;
+            
+            // Store the full dataset
+            fullData = data;
+            
+            // Update status bar with latest data
+            const latest = data[data.length - 1];
+            document.getElementById('current-cpu').textContent = latest.cpu.toFixed(1);
+            document.getElementById('current-mem').textContent = latest.mem.toFixed(1);
+            document.getElementById('active-count').textContent = latest.active_functions.length;
+            document.getElementById('last-update').textContent = latest.timestamp;
+            
+            // Update active functions list
+            const activeFunctionsDiv = document.getElementById('active-functions');
+            activeFunctionsDiv.innerHTML = '';
+            latest.active_functions.forEach(func => {
+                const tag = document.createElement('div');
+                tag.className = 'function-tag';
+                tag.textContent = func.split(':')[1] || func;
+                activeFunctionsDiv.appendChild(tag);
+            });
+
+            // Update x-scale domain using consistent timestamp parsing
+            const timeExtent = d3.extent(data, d => parseTimestamp(d.timestamp));
+            x.domain(timeExtent);
+            
+            // Always cap CPU at 100% for visualization
+            const cpuMax = 100;
+            const memMax = d3.max(data, d => d.mem) * 1.1;
+            yCpu.domain([0, cpuMax]);
+            yMem.domain([0, memMax]);
+
+            // Rescale x-axis using zoom state if available
+            const currentX = currentZoomState ? currentZoomState.rescaleX(x) : x;
+
+            // Update axes
+            updateCpuAxes(currentX);
+            updateMemAxes(currentX);
+            
+            // Update CPU lines and area (cap values at 100% for display)
+            cpuContent.select(".cpu-line")
+                .attr("d", cpuLine
+                    .x(d => currentX(parseTimestamp(d.timestamp)))
+                    .y(d => yCpu(Math.min(d.cpu, 100)))
+                (data));
+            
+            cpuContent.select(".cpu-area")
+                .attr("d", cpuArea
+                    .x(d => currentX(parseTimestamp(d.timestamp)))
+                    .y1(d => yCpu(Math.min(d.cpu, 100)))
+                (data));
+
+            // Update memory lines and area
+            memContent.select(".mem-line")
+                .attr("d", memLine
+                    .x(d => currentX(parseTimestamp(d.timestamp)))
+                    .y(d => yMem(d.mem))
+                (data));
+
+            memContent.select(".mem-area")
+                .attr("d", memArea
+                    .x(d => currentX(parseTimestamp(d.timestamp)))
+                    .y1(d => yMem(d.mem))
+                (data));
+
+            // Rotate x-axis labels for readability
+            cpuSvg.selectAll(".x.axis text")
+                .attr("transform", "rotate(-45)")
+                .attr("dx", "-0.8em")
+                .attr("dy", "0.15em")
+                .style("text-anchor", "end");
+
+            memSvg.selectAll(".x.axis text")
+                .attr("transform", "rotate(-45)")
+                .attr("dx", "-0.8em")
+                .attr("dy", "0.15em")
+                .style("text-anchor", "end");
+        }
+
+    </script>
+</body>
+</html>

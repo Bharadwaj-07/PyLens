@@ -1,0 +1,50 @@
+{
+  "DelayFunctions.py:functionOne:0": {
+    "calls": 1,
+    "total_time": 31.25,
+    "avg_cpu": 1.03,
+    "avg_mem": 1.0,
+    "peak_cpu": 1.03,
+    "peak_mem": 1.0
+  },
+  "DelayFunctions.py:functionTwo:0": {
+    "calls": 1,
+    "total_time": 0.0,
+    "avg_cpu": 0.0,
+    "avg_mem": 0.51,
+    "peak_cpu": 0.0,
+    "peak_mem": 0.51
+  },
+  "DelayFunctions.py:functionFour:0": {
+    "calls": 1,
+    "total_time": 15.63,
+    "avg_cpu": 0.52,
+    "avg_mem": 0.0,
+    "peak_cpu": 0.52,
+    "peak_mem": 0.0
+  },
+  "DelayFunctions.py:sleepThreeSeconds:0": {
+    "calls": 2,
+    "total_time": 15.63,
+    "avg_cpu": 0.26,
+    "avg_mem": 0.76,
+    "peak_cpu": 0.52,
+    "peak_mem": 1.0
+  },
+  "DelayFunctions.py:functionThree:0": {
+    "calls": 0,
+    "total_time": 0.0,
+    "avg_cpu": 0.0,
+    "avg_mem": 0.0,
+    "peak_cpu": 0.0,
+    "peak_mem": 0.0
+  },
+  "DelayFunctions.py:main:0": {
+    "calls": 0,
+    "total_time": 0.0,
+    "avg_cpu": 0.0,
+    "avg_mem": 0.0,
+    "peak_cpu": 0.0,
+    "peak_mem": 0.0
+  }
+}

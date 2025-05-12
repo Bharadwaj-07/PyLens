@@ -1,0 +1,29 @@
+[
+  {
+    "timestamp": "08:45:14",
+    "cpu": 13.72,
+    "mem": 8.49,
+    "active_functions": [
+      "DelayFunctions.functionOne",
+      "DelayFunctions.main",
+      "DelayFunctions.sleepThreeSeconds"
+    ]
+  },
+  {
+    "timestamp": "08:45:14",
+    "cpu": 13.72,
+    "mem": 8.97,
+    "active_functions": []
+  },
+  {
+    "timestamp": "08:45:14",
+    "cpu": 13.72,
+    "mem": 8.97,
+    "active_functions": [
+      "DelayFunctions.functionFour",
+      "DelayFunctions.functionThree",
+      "DelayFunctions.functionTwo",
+      "DelayFunctions.sleepThreeSeconds"
+    ]
+  }
+]
