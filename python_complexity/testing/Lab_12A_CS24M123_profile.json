@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "notebook_path": "c:\\Users\\bhara\\OneDrive\\Desktop\\Mtech\\Sem2\\SDE\\python_complexity\\testing\\Lab_12A_CS24M123.ipynb",
+    "profile_timestamp": "2025-05-13 12:52:49",
+    "function_name": "run_notebook_function"
+  },
+  "cells": {
+    "0": {
+      "lines": {
+        "3": {
+          "code": "import torch",
+          "hits": 1,
+          "time": 91170738.0,
+          "time_per_hit": 90000000.0,
+          "percent": 39.2232508317342
+        },
+        "4": {
+          "code": "import torch.nn as nn",
+          "hits": 1,
+          "time": 71.0,
+          "time_per_hit": 71.0,
+          "percent": 3.054544550306402e-05
+        },
+        "5": {
+          "code": "import torch.nn.functional as F",
+          "hits": 1,
+          "time": 28.0,
+          "time_per_hit": 28.0,
+          "percent": 1.2046091184306936e-05
+        },
+        "6": {
+          "code": "from torchvision import datasets, transforms",
+          "hits": 1,
+          "time": 73790034.0,
+          "time_per_hit": 70000000.0,
+          "percent": 31.745767073468183
+        },
+        "7": {
+          "code": "from torch.utils.data import DataLoader",
+          "hits": 1,
+          "time": 73.0,
+          "time_per_hit": 73.0,
+          "percent": 3.140588058765737e-05
+        },
+        "8": {
+          "code": "import matplotlib.pyplot as plt",
+          "hits": 1,
+          "time": 11336151.0,
+          "time_per_hit": 10000000.0,
+          "percent": 4.87701102232401
+        },
+        "11": {
+          "code": "device = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")",
+          "hits": 1,
+          "time": 19151849.0,
+          "time_per_hit": 20000000.0,
+          "percent": 8.239461407217059
+        },
+        "14": {
+          "code": "class SimpleUNet(nn.Module):",
+          "hits": 1,
+          "time": 449.0,
+          "time_per_hit": 449.0,
+          "percent": 0.00019316767649120767
+        },
+        "37": {
+          "code": "class Diffusion:",
+          "hits": 1,
+          "time": 173.0,
+          "time_per_hit": 173.0,
+          "percent": 7.4427634817325e-05
+        },
+        "52": {
+          "code": "model = SimpleUNet().to(device)",
+          "hits": 1,
+          "time": 2189225.0,
+          "time_per_hit": 2000000.0,
+          "percent": 0.9418429990344414
+        },
+        "53": {
+          "code": "diffusion = Diffusion(T=1000, device=device)",
+          "hits": 1,
+          "time": 1229711.0,
+          "time_per_hit": 1000000.0,
+          "percent": 0.5290432441551881
+        },
+        "54": {
+          "code": "optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)",
+          "hits": 1,
+          "time": 7317.0,
+          "time_per_hit": 7317.0,
+          "percent": 0.0031479017569847807
+        },
+        "57": {
+          "code": "transform = transforms.Compose([",
+          "hits": 2,
+          "time": 182.0,
+          "time_per_hit": 91.0,
+          "percent": 7.82995926979951e-05
+        },
+        "58": {
+          "code": "transforms.ToTensor(),",
+          "hits": 1,
+          "time": 168.0,
+          "time_per_hit": 168.0,
+          "percent": 7.227654710584163e-05
+        },
+        "59": {
+          "code": "transforms.Lambda(lambda x: x * 2 - 1)  # [-1, 1] scaling",
+          "hits": 1,
+          "time": 123.0,
+          "time_per_hit": 123.0,
+          "percent": 5.29167577024912e-05
+        },
+        "61": {
+          "code": "dataset = datasets.MNIST(root=\"data\", train=True, transform=transform, download=True)",
+          "hits": 1,
+          "time": 1639708.0,
+          "time_per_hit": 2000000.0,
+          "percent": 0.7054311458441985
+        },
+        "62": {
+          "code": "dataloader = DataLoader(dataset, batch_size=128, shuffle=True)",
+          "hits": 1,
+          "time": 9997.0,
+          "time_per_hit": 9997.0,
+          "percent": 0.004300884770339873
+        },
+        "65": {
+          "code": "for epoch in range(0):",
+          "hits": 1,
+          "time": 49.0,
+          "time_per_hit": 49.0,
+          "percent": 2.1080659572537142e-05
+        },
+        "78": {
+          "code": "def generate_samples(model, diffusion, num_samples=16, device=\"cpu\"):",
+          "hits": 1,
+          "time": 59.0,
+          "time_per_hit": 59.0,
+          "percent": 2.5382834995503904e-05
+        },
+        "99": {
+          "code": "samples = generate_samples(model, diffusion, num_samples=16, device=device)",
+          "hits": 1,
+          "time": 27838273.0,
+          "time_per_hit": 30000000.0,
+          "percent": 11.976513391843921
+        },
+        "100": {
+          "code": "fig, axes = plt.subplots(4, 4, figsize=(8, 8))",
+          "hits": 1,
+          "time": 3308382.0,
+          "time_per_hit": 3000000.0,
+          "percent": 1.4233239730185627
+        },
+        "101": {
+          "code": "for i, ax in enumerate(axes.flat):",
+          "hits": 17,
+          "time": 154.0,
+          "time_per_hit": 9.1,
+          "percent": 6.625350151368815e-05
+        },
+        "102": {
+          "code": "ax.imshow(samples[i].squeeze(), cmap=\"gray\")",
+          "hits": 16,
+          "time": 361812.0,
+          "time_per_hit": 22613.2,
+          "percent": 0.15565786941344506
+        },
+        "103": {
+          "code": "ax.axis(\"off\")",
+          "hits": 16,
+          "time": 9102.0,
+          "time_per_hit": 568.9,
+          "percent": 0.003915840069984348
+        },
+        "104": {
+          "code": "plt.tight_layout()",
+          "hits": 1,
+          "time": 383045.0,
+          "time_per_hit": 383045.0,
+          "percent": 0.1647926784890304
+        },
+        "105": {
+          "code": "plt.show()",
+          "hits": 1,
+          "time": 13672.0,
+          "time_per_hit": 13672.0,
+          "percent": 0.005881934238280159
+        }
+      },
+      "total_time": 232440545.0,
+      "total_hits": 73,
+      "percent_time": 100.0,
+      "classification": "Performance-Critical"
+    }
+  },
+  "summary": {
+    "total_execution_time_seconds": 23.249269485473633,
+    "memory_used_mb": 364.6484375,
+    "peak_memory_mb": 420.01953125
+  }
+}

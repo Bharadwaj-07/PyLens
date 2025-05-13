@@ -1,0 +1,634 @@
+{
+  "projectName": "checking",
+  "files": [
+    {
+      "path": "check_1.py",
+      "fileName": "check_1.py",
+      "fileStats": {
+        "loc": 214,
+        "comments": 9,
+        "blank": 45,
+        "commentRatio": 0.04205607476635514
+      },
+      "complexity": [
+        {
+          "name": "calculate_statistics",
+          "value": 8,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Many Parameters"
+          ]
+        },
+        {
+          "name": "complex_calculation",
+          "value": 7,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "compute_values",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "nested_loops_example",
+          "value": 6,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "more_complex_function",
+          "value": 5,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Many Parameters"
+          ]
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "add",
+          "value": 1,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "subtract",
+          "value": 1,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "multiply",
+          "value": 1,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "divide",
+          "value": 2,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "power",
+          "value": 1,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "sqrt",
+          "value": 2,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "get_history",
+          "value": 1,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "Shape",
+          "issues": []
+        },
+        {
+          "name": "area",
+          "value": 1,
+          "type": "method",
+          "class": "Shape",
+          "issues": []
+        },
+        {
+          "name": "perimeter",
+          "value": 1,
+          "type": "method",
+          "class": "Shape",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "Rectangle",
+          "issues": []
+        },
+        {
+          "name": "area",
+          "value": 1,
+          "type": "method",
+          "class": "Rectangle",
+          "issues": []
+        },
+        {
+          "name": "perimeter",
+          "value": 1,
+          "type": "method",
+          "class": "Rectangle",
+          "issues": [
+            "Dead Code"
+          ]
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "Square",
+          "issues": []
+        },
+        {
+          "name": "area",
+          "value": 1,
+          "type": "method",
+          "class": "Square",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "Cube",
+          "issues": []
+        },
+        {
+          "name": "volume",
+          "value": 1,
+          "type": "method",
+          "class": "Cube",
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Many Parameters",
+          "message": "calculate_statistics() (6 parameters)",
+          "line": 49
+        },
+        {
+          "type": "Many Parameters",
+          "message": "more_complex_function() (8 parameters)",
+          "line": 177
+        }
+      ],
+      "maintainabilityIndex": 38.16,
+      "ownership": {
+        "<global>": [
+          "calculate_statistics",
+          "complex_calculation",
+          "compute_values",
+          "nested_loops_example",
+          "more_complex_function"
+        ],
+        "SuperCalculator": [
+          "__init__",
+          "add",
+          "subtract",
+          "multiply",
+          "divide",
+          "power",
+          "sqrt",
+          "get_history"
+        ],
+        "Shape": [
+          "__init__",
+          "area",
+          "perimeter"
+        ],
+        "Rectangle": [
+          "__init__",
+          "area",
+          "perimeter"
+        ],
+        "Square": [
+          "__init__",
+          "area"
+        ],
+        "Cube": [
+          "__init__",
+          "volume"
+        ]
+      },
+      "deadCode": [
+        "Rectangle.perimeter (method)"
+      ]
+    },
+    {
+      "path": "hello\\check.py",
+      "fileName": "check.py",
+      "fileStats": {
+        "loc": 103,
+        "comments": 20,
+        "blank": 14,
+        "commentRatio": 0.1941747572815534
+      },
+      "complexity": [
+        {
+          "name": "processData",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "DoTheThings",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "neverCalled",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming",
+            "Dead Code"
+          ]
+        },
+        {
+          "name": "applyGlobalDiscount",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming",
+            "Dead Code"
+          ]
+        },
+        {
+          "name": "calculateInvoices",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "generate",
+          "value": 4,
+          "type": "method",
+          "class": "ReportManager",
+          "issues": []
+        },
+        {
+          "name": "do_nothing",
+          "value": 1,
+          "type": "method",
+          "class": "ReportManager",
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function processData() (should be snake_case)",
+          "line": 9
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function DoTheThings() (should be snake_case)",
+          "line": 34
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function neverCalled() (should be snake_case)",
+          "line": 68
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function applyGlobalDiscount() (should be snake_case)",
+          "line": 76
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function calculateInvoices() (should be snake_case)",
+          "line": 80
+        }
+      ],
+      "maintainabilityIndex": 64.54,
+      "ownership": {
+        "<global>": [
+          "processData",
+          "DoTheThings",
+          "neverCalled",
+          "applyGlobalDiscount",
+          "calculateInvoices"
+        ],
+        "ReportManager": [
+          "generate",
+          "do_nothing"
+        ]
+      },
+      "deadCode": [
+        "taxRate (variable)",
+        "dataList (variable)",
+        "temp (variable)",
+        "if (unreachable_code)",
+        "neverCalled (function)",
+        "applyGlobalDiscount (function)"
+      ]
+    },
+    {
+      "path": "hello\\checking\\check.py",
+      "fileName": "check.py",
+      "fileStats": {
+        "loc": 214,
+        "comments": 9,
+        "blank": 45,
+        "commentRatio": 0.04205607476635514
+      },
+      "complexity": [
+        {
+          "name": "calculate_statistics",
+          "value": 8,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Many Parameters"
+          ]
+        },
+        {
+          "name": "complex_calculation",
+          "value": 7,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "compute_values",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "nested_loops_example",
+          "value": 6,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "more_complex_function",
+          "value": 5,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Many Parameters"
+          ]
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "add",
+          "value": 1,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "subtract",
+          "value": 1,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "multiply",
+          "value": 1,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "divide",
+          "value": 2,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "power",
+          "value": 1,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "sqrt",
+          "value": 2,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "get_history",
+          "value": 1,
+          "type": "method",
+          "class": "SuperCalculator",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "Shape",
+          "issues": []
+        },
+        {
+          "name": "area",
+          "value": 1,
+          "type": "method",
+          "class": "Shape",
+          "issues": []
+        },
+        {
+          "name": "perimeter",
+          "value": 1,
+          "type": "method",
+          "class": "Shape",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "Rectangle",
+          "issues": []
+        },
+        {
+          "name": "area",
+          "value": 1,
+          "type": "method",
+          "class": "Rectangle",
+          "issues": []
+        },
+        {
+          "name": "perimeter",
+          "value": 1,
+          "type": "method",
+          "class": "Rectangle",
+          "issues": [
+            "Dead Code"
+          ]
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "Square",
+          "issues": []
+        },
+        {
+          "name": "area",
+          "value": 1,
+          "type": "method",
+          "class": "Square",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "Cube",
+          "issues": []
+        },
+        {
+          "name": "volume",
+          "value": 1,
+          "type": "method",
+          "class": "Cube",
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Many Parameters",
+          "message": "calculate_statistics() (6 parameters)",
+          "line": 49
+        },
+        {
+          "type": "Many Parameters",
+          "message": "more_complex_function() (8 parameters)",
+          "line": 177
+        }
+      ],
+      "maintainabilityIndex": 38.16,
+      "ownership": {
+        "<global>": [
+          "calculate_statistics",
+          "complex_calculation",
+          "compute_values",
+          "nested_loops_example",
+          "more_complex_function"
+        ],
+        "SuperCalculator": [
+          "__init__",
+          "add",
+          "subtract",
+          "multiply",
+          "divide",
+          "power",
+          "sqrt",
+          "get_history"
+        ],
+        "Shape": [
+          "__init__",
+          "area",
+          "perimeter"
+        ],
+        "Rectangle": [
+          "__init__",
+          "area",
+          "perimeter"
+        ],
+        "Square": [
+          "__init__",
+          "area"
+        ],
+        "Cube": [
+          "__init__",
+          "volume"
+        ]
+      },
+      "deadCode": [
+        "Rectangle.perimeter (method)"
+      ]
+    }
+  ],
+  "summary": {
+    "totalFiles": 3,
+    "totalLines": 531,
+    "totalClasses": 11,
+    "totalFunctions": 53,
+    "maintainabilityIndex": 43.28,
+    "reusabilityScore": 62.15,
+    "carbonFootprint": 1.73,
+    "smells": [
+      {
+        "type": "Long Functions",
+        "count": 0
+      },
+      {
+        "type": "Long Classes",
+        "count": 0
+      },
+      {
+        "type": "Many Parameters",
+        "count": 4
+      },
+      {
+        "type": "Deep Nesting",
+        "count": 0
+      },
+      {
+        "type": "Many Methods",
+        "count": 0
+      },
+      {
+        "type": "High Complexity",
+        "count": 0
+      },
+      {
+        "type": "Inconsistent Names",
+        "count": 5
+      },
+      {
+        "type": "Dead Code",
+        "count": 8
+      }
+    ]
+  }
+}

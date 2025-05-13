@@ -1,0 +1,5978 @@
+{
+  "projectName": "Github",
+  "files": [
+    {
+      "path": "python-mini-projects\\projects\\birthDateToCurrentAge.py",
+      "fileName": "birthDateToCurrentAge.py",
+      "fileStats": {
+        "loc": 38,
+        "comments": 11,
+        "blank": 9,
+        "commentRatio": 0.2894736842105263
+      },
+      "complexity": [
+        {
+          "name": "ageCalculator",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function ageCalculator() (should be snake_case)",
+          "line": 4
+        }
+      ],
+      "maintainabilityIndex": 79.46,
+      "ownership": {
+        "<global>": [
+          "ageCalculator"
+        ]
+      },
+      "deadCode": [
+        "age_day (variable)",
+        "age_months (variable)",
+        "age_year (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Alarm clock\\alarm_clock.py",
+      "fileName": "alarm_clock.py",
+      "fileStats": {
+        "loc": 86,
+        "comments": 12,
+        "blank": 17,
+        "commentRatio": 0.13953488372093023
+      },
+      "complexity": [
+        {
+          "name": "Threading",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "alarm",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function Threading() (should be snake_case)",
+          "line": 15
+        }
+      ],
+      "maintainabilityIndex": 83.7,
+      "ownership": {
+        "<global>": [
+          "Threading",
+          "alarm"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\All_links_from_given_webpage\\get_links.py",
+      "fileName": "get_links.py",
+      "fileStats": {
+        "loc": 17,
+        "comments": 2,
+        "blank": 2,
+        "commentRatio": 0.11764705882352941
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 85.67,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Ascii_art\\make_art.py",
+      "fileName": "make_art.py",
+      "fileStats": {
+        "loc": 54,
+        "comments": 8,
+        "blank": 17,
+        "commentRatio": 0.14814814814814814
+      },
+      "complexity": [
+        {
+          "name": "print_out_ascii",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "img_to_ascii",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 78.83,
+      "ownership": {
+        "<global>": [
+          "print_out_ascii",
+          "img_to_ascii"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\AudioBook\\Audio-book.py",
+      "fileName": "Audio-book.py",
+      "fileStats": {
+        "loc": 36,
+        "comments": 11,
+        "blank": 9,
+        "commentRatio": 0.3055555555555556
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Baidu_POI_crawl\\main.py",
+      "fileName": "main.py",
+      "fileStats": {
+        "loc": 27,
+        "comments": 0,
+        "blank": 6,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "run",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 63.3,
+      "ownership": {
+        "<global>": [
+          "run"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Baidu_POI_crawl\\util.py",
+      "fileName": "util.py",
+      "fileStats": {
+        "loc": 47,
+        "comments": 1,
+        "blank": 2,
+        "commentRatio": 0.02127659574468085
+      },
+      "complexity": [
+        {
+          "name": "get_baidu_poi",
+          "value": 5,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Long Function",
+            "Dead Code"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "get_baidu_poi() (41 lines)",
+          "line": 7
+        }
+      ],
+      "maintainabilityIndex": 70.75,
+      "ownership": {
+        "<global>": [
+          "get_baidu_poi"
+        ]
+      },
+      "deadCode": [
+        "get_baidu_poi (function)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Battery_notification\\battery.py",
+      "fileName": "battery.py",
+      "fileStats": {
+        "loc": 19,
+        "comments": 4,
+        "blank": 5,
+        "commentRatio": 0.21052631578947367
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 97.47,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Billing_system\\biling_system.py",
+      "fileName": "biling_system.py",
+      "fileStats": {
+        "loc": 427,
+        "comments": 28,
+        "blank": 61,
+        "commentRatio": 0.06557377049180328
+      },
+      "complexity": [
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "Bill_App",
+          "issues": [
+            "Long Function"
+          ]
+        },
+        {
+          "name": "total",
+          "value": 1,
+          "type": "method",
+          "class": "Bill_App",
+          "issues": [
+            "Long Function"
+          ]
+        },
+        {
+          "name": "welcome_bill",
+          "value": 1,
+          "type": "method",
+          "class": "Bill_App",
+          "issues": []
+        },
+        {
+          "name": "bill_area",
+          "value": 27,
+          "type": "method",
+          "class": "Bill_App",
+          "issues": [
+            "High complexity (>10)",
+            "Long Function"
+          ]
+        },
+        {
+          "name": "save_bill",
+          "value": 2,
+          "type": "method",
+          "class": "Bill_App",
+          "issues": []
+        },
+        {
+          "name": "find_bill",
+          "value": 5,
+          "type": "method",
+          "class": "Bill_App",
+          "issues": []
+        },
+        {
+          "name": "clear_data",
+          "value": 2,
+          "type": "method",
+          "class": "Bill_App",
+          "issues": [
+            "Long Function"
+          ]
+        },
+        {
+          "name": "exit_app",
+          "value": 2,
+          "type": "method",
+          "class": "Bill_App",
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Class",
+          "message": "Bill_App (414 lines)",
+          "line": 7
+        },
+        {
+          "type": "Long Function",
+          "message": "__init__() (228 lines)",
+          "line": 8
+        },
+        {
+          "type": "Long Function",
+          "message": "total() (38 lines)",
+          "line": 238
+        },
+        {
+          "type": "Long Function",
+          "message": "bill_area() (58 lines)",
+          "line": 288
+        },
+        {
+          "type": "Long Function",
+          "message": "clear_data() (41 lines)",
+          "line": 374
+        }
+      ],
+      "maintainabilityIndex": 32.92,
+      "ownership": {
+        "Bill_App": [
+          "__init__",
+          "total",
+          "welcome_bill",
+          "bill_area",
+          "save_bill",
+          "find_bill",
+          "clear_data",
+          "exit_app"
+        ]
+      },
+      "deadCode": [
+        "obj (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Bouncing_ball_simulator\\ball_bounce.py",
+      "fileName": "ball_bounce.py",
+      "fileStats": {
+        "loc": 56,
+        "comments": 10,
+        "blank": 7,
+        "commentRatio": 0.17857142857142858
+      },
+      "complexity": [
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "ball",
+          "issues": []
+        },
+        {
+          "name": "render_ball",
+          "value": 1,
+          "type": "method",
+          "class": "ball",
+          "issues": []
+        },
+        {
+          "name": "move_ball",
+          "value": 7,
+          "type": "method",
+          "class": "ball",
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 71.86,
+      "ownership": {
+        "ball": [
+          "__init__",
+          "render_ball",
+          "move_ball"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Calculate_age\\calculate.py",
+      "fileName": "calculate.py",
+      "fileStats": {
+        "loc": 49,
+        "comments": 4,
+        "blank": 10,
+        "commentRatio": 0.08163265306122448
+      },
+      "complexity": [
+        {
+          "name": "judge_leap_year",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "month_days",
+          "value": 7,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 66.92,
+      "ownership": {
+        "<global>": [
+          "judge_leap_year",
+          "month_days"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Captcha_Genrator\\Captcha_Genrator.py",
+      "fileName": "Captcha_Genrator.py",
+      "fileStats": {
+        "loc": 56,
+        "comments": 0,
+        "blank": 11,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "verify",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "refresh",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 81.01,
+      "ownership": {
+        "<global>": [
+          "verify",
+          "refresh"
+        ]
+      },
+      "deadCode": [
+        "string (import)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\capture_screenshot\\screenshot.py",
+      "fileName": "screenshot.py",
+      "fileStats": {
+        "loc": 47,
+        "comments": 0,
+        "blank": 19,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 53.54,
+      "ownership": {},
+      "deadCode": [
+        "image (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Capture_Video_Frames\\capture_video_frames.py",
+      "fileName": "capture_video_frames.py",
+      "fileStats": {
+        "loc": 41,
+        "comments": 0,
+        "blank": 6,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "__init__",
+          "value": 2,
+          "type": "method",
+          "class": "FrameCapture",
+          "issues": []
+        },
+        {
+          "name": "capture_frames",
+          "value": 2,
+          "type": "method",
+          "class": "FrameCapture",
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 88.46,
+      "ownership": {
+        "FrameCapture": [
+          "__init__",
+          "capture_frames"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\cat_command\\cat.py",
+      "fileName": "cat.py",
+      "fileStats": {
+        "loc": 79,
+        "comments": 1,
+        "blank": 24,
+        "commentRatio": 0.012658227848101266
+      },
+      "complexity": [
+        {
+          "name": "readFile",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "cli",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "main",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "Logger",
+          "issues": []
+        },
+        {
+          "name": "error",
+          "value": 1,
+          "type": "method",
+          "class": "Logger",
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function readFile() (should be snake_case)",
+          "line": 26
+        }
+      ],
+      "maintainabilityIndex": 86.7,
+      "ownership": {
+        "<global>": [
+          "readFile",
+          "cli",
+          "main"
+        ],
+        "Logger": [
+          "__init__",
+          "error"
+        ]
+      },
+      "deadCode": [
+        "stderr (import)",
+        "stdout (import)",
+        "os (import)",
+        "verbose (attribute)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\chatbot\\bot.py",
+      "fileName": "bot.py",
+      "fileStats": {
+        "loc": 237,
+        "comments": 13,
+        "blank": 39,
+        "commentRatio": 0.05485232067510549
+      },
+      "complexity": [
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "MyBot",
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Class",
+          "message": "MyBot (206 lines)",
+          "line": 24
+        }
+      ],
+      "maintainabilityIndex": 51.95,
+      "ownership": {
+        "MyBot": [
+          "__init__"
+        ]
+      },
+      "deadCode": [
+        "on_ready (method)",
+        "on_message (method)",
+        "on_login (method)",
+        "on_friendship (method)",
+        "on_room_join (method)",
+        "date (variable)",
+        "inviter (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\chatbot\\simple-bot.py",
+      "fileName": "simple-bot.py",
+      "fileStats": {
+        "loc": 13,
+        "comments": 0,
+        "blank": 3,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 73.18,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Check_website_connectivity\\check_connectivity.py",
+      "fileName": "check_connectivity.py",
+      "fileStats": {
+        "loc": 25,
+        "comments": 1,
+        "blank": 8,
+        "commentRatio": 0.04
+      },
+      "complexity": [
+        {
+          "name": "main",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 79.53,
+      "ownership": {
+        "<global>": [
+          "main"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\cli_proxy_tester\\cli.py",
+      "fileName": "cli.py",
+      "fileStats": {
+        "loc": 55,
+        "comments": 0,
+        "blank": 15,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "validate_proxy",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "cli",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "single",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Dead Code"
+          ]
+        },
+        {
+          "name": "csv_file",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Dead Code"
+          ]
+        },
+        {
+          "name": "add_from_txt_file",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Dead Code"
+          ]
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 58.73,
+      "ownership": {
+        "<global>": [
+          "validate_proxy",
+          "cli",
+          "single",
+          "csv_file",
+          "add_from_txt_file"
+        ]
+      },
+      "deadCode": [
+        "ctx (variable)",
+        "param (variable)",
+        "single (function)",
+        "csv_file (function)",
+        "add_from_txt_file (function)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\cli_proxy_tester\\proxytest.py",
+      "fileName": "proxytest.py",
+      "fileStats": {
+        "loc": 119,
+        "comments": 3,
+        "blank": 29,
+        "commentRatio": 0.025210084033613446
+      },
+      "complexity": [
+        {
+          "name": "add_proxies_to_file",
+          "value": 5,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "test_proxy",
+          "value": 5,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Long Function"
+          ]
+        },
+        {
+          "name": "test_single_proxy",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "test_csv_file",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "add_from_text_file",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Dead Code"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "test_proxy() (33 lines)",
+          "line": 43
+        }
+      ],
+      "maintainabilityIndex": 59.66,
+      "ownership": {
+        "<global>": [
+          "add_proxies_to_file",
+          "test_proxy",
+          "test_single_proxy",
+          "test_csv_file",
+          "add_from_text_file"
+        ]
+      },
+      "deadCode": [
+        "index (variable)",
+        "add_from_text_file (function)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Cli_todo\\todo.py",
+      "fileName": "todo.py",
+      "fileStats": {
+        "loc": 68,
+        "comments": 9,
+        "blank": 5,
+        "commentRatio": 0.1323529411764706
+      },
+      "complexity": [
+        {
+          "name": "todo",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "tasks",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "add",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Dead Code"
+          ]
+        },
+        {
+          "name": "done",
+          "value": 5,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Dead Code"
+          ]
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 64.36,
+      "ownership": {
+        "<global>": [
+          "todo",
+          "tasks",
+          "add",
+          "done"
+        ]
+      },
+      "deadCode": [
+        "add (function)",
+        "done (function)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Compute_IoU\\Compute_IoU.py",
+      "fileName": "Compute_IoU.py",
+      "fileStats": {
+        "loc": 33,
+        "comments": 6,
+        "blank": 4,
+        "commentRatio": 0.18181818181818182
+      },
+      "complexity": [
+        {
+          "name": "Cal_IoU",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function Cal_IoU() (should be snake_case)",
+          "line": 3
+        }
+      ],
+      "maintainabilityIndex": 83.24,
+      "ownership": {
+        "<global>": [
+          "Cal_IoU"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\convert pdf to text\\converter1.py",
+      "fileName": "converter1.py",
+      "fileStats": {
+        "loc": 43,
+        "comments": 5,
+        "blank": 21,
+        "commentRatio": 0.11627906976744186
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 85.58,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Convert_a_image_to_pdf\\convert_image_to_pdf.py",
+      "fileName": "convert_image_to_pdf.py",
+      "fileStats": {
+        "loc": 23,
+        "comments": 0,
+        "blank": 2,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 68.11,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\convert_dictionary_to_python_object\\conversion.py",
+      "fileName": "conversion.py",
+      "fileStats": {
+        "loc": 6,
+        "comments": 0,
+        "blank": 0,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "__init__",
+          "value": 3,
+          "type": "method",
+          "class": "obj",
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {
+        "obj": [
+          "__init__"
+        ]
+      },
+      "deadCode": [
+        "ob (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\convert_Imgs\\convertDynamic.py",
+      "fileName": "convertDynamic.py",
+      "fileStats": {
+        "loc": 19,
+        "comments": 0,
+        "blank": 1,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": [
+        "dirs (variable)",
+        "root (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\convert_Imgs\\JPGtoPNG.py",
+      "fileName": "JPGtoPNG.py",
+      "fileStats": {
+        "loc": 4,
+        "comments": 0,
+        "blank": 1,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\convert_Imgs\\PNGtoJPG.py",
+      "fileName": "PNGtoJPG.py",
+      "fileStats": {
+        "loc": 4,
+        "comments": 0,
+        "blank": 1,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Convert_JPEG_to_PNG\\converter_GUI.py",
+      "fileName": "converter_GUI.py",
+      "fileStats": {
+        "loc": 40,
+        "comments": 6,
+        "blank": 8,
+        "commentRatio": 0.15
+      },
+      "complexity": [
+        {
+          "name": "getJPG",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "convertToPNG",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function getJPG() (should be snake_case)",
+          "line": 14
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function convertToPNG() (should be snake_case)",
+          "line": 28
+        }
+      ],
+      "maintainabilityIndex": 85.54,
+      "ownership": {
+        "<global>": [
+          "getJPG",
+          "convertToPNG"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Convert_JPEG_to_PNG\\converter_terminal.py",
+      "fileName": "converter_terminal.py",
+      "fileStats": {
+        "loc": 3,
+        "comments": 2,
+        "blank": 0,
+        "commentRatio": 0.6666666666666666
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Convert_JSON_to_CSV\\converter.py",
+      "fileName": "converter.py",
+      "fileStats": {
+        "loc": 15,
+        "comments": 0,
+        "blank": 3,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 67.58,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Convert_numbers_to_word\\converter.py",
+      "fileName": "converter.py",
+      "fileStats": {
+        "loc": 83,
+        "comments": 0,
+        "blank": 13,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "converter",
+          "value": 34,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "High complexity (>10)",
+            "Long Function",
+            "Deep Nesting"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "converter() (54 lines)",
+          "line": 19
+        },
+        {
+          "type": "Deep Nesting",
+          "message": "converter() (depth 5)",
+          "line": 19
+        }
+      ],
+      "maintainabilityIndex": 33.26,
+      "ownership": {
+        "<global>": [
+          "converter"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\convert_png_images_to_ico_format\\convert.py",
+      "fileName": "convert.py",
+      "fileStats": {
+        "loc": 5,
+        "comments": 2,
+        "blank": 0,
+        "commentRatio": 0.4
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\convert_png_images_to_ico_format\\convertUI.py",
+      "fileName": "convertUI.py",
+      "fileStats": {
+        "loc": 44,
+        "comments": 7,
+        "blank": 4,
+        "commentRatio": 0.1590909090909091
+      },
+      "complexity": [
+        {
+          "name": "getPNG",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "convertToICO",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function getPNG() (should be snake_case)",
+          "line": 14
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function convertToICO() (should be snake_case)",
+          "line": 20
+        }
+      ],
+      "maintainabilityIndex": 86.22,
+      "ownership": {
+        "<global>": [
+          "getPNG",
+          "convertToICO"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Convert_XML_To_JSON\\converter.py",
+      "fileName": "converter.py",
+      "fileStats": {
+        "loc": 14,
+        "comments": 0,
+        "blank": 5,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Countdown_timer\\main.py",
+      "fileName": "main.py",
+      "fileStats": {
+        "loc": 15,
+        "comments": 0,
+        "blank": 4,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "countdown",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 72.27,
+      "ownership": {
+        "<global>": [
+          "countdown"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Create_a_script_to_encrypt_files_and_folder\\encrypt.py",
+      "fileName": "encrypt.py",
+      "fileStats": {
+        "loc": 39,
+        "comments": 3,
+        "blank": 9,
+        "commentRatio": 0.07692307692307693
+      },
+      "complexity": [
+        {
+          "name": "encrypt_dir",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "encrypt_file",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 74.0,
+      "ownership": {
+        "<global>": [
+          "encrypt_dir",
+          "encrypt_file"
+        ]
+      },
+      "deadCode": [
+        "b2a_hex (import)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Create_a_simple_stopwatch\\stopwatch.py",
+      "fileName": "stopwatch.py",
+      "fileStats": {
+        "loc": 81,
+        "comments": 14,
+        "blank": 14,
+        "commentRatio": 0.1728395061728395
+      },
+      "complexity": [
+        {
+          "name": "counter_label",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "Start",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "Stop",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "Reset",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "count",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function Start() (should be snake_case)",
+          "line": 35
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function Stop() (should be snake_case)",
+          "line": 45
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function Reset() (should be snake_case)",
+          "line": 54
+        }
+      ],
+      "maintainabilityIndex": 77.88,
+      "ownership": {
+        "<global>": [
+          "counter_label",
+          "Start",
+          "Stop",
+          "Reset",
+          "count"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Create_calculator_app\\calculator.py",
+      "fileName": "calculator.py",
+      "fileStats": {
+        "loc": 137,
+        "comments": 2,
+        "blank": 37,
+        "commentRatio": 0.014598540145985401
+      },
+      "complexity": [
+        {
+          "name": "get_input",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "backspace",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "clear",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "calc",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "popupmsg",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "cal",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Long Function"
+          ]
+        },
+        {
+          "name": "quit",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "cal() (91 lines)",
+          "line": 43
+        }
+      ],
+      "maintainabilityIndex": 50.05,
+      "ownership": {
+        "<global>": [
+          "get_input",
+          "backspace",
+          "clear",
+          "calc",
+          "popupmsg",
+          "cal",
+          "quit"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Currency_converter\\cc.py",
+      "fileName": "cc.py",
+      "fileStats": {
+        "loc": 218,
+        "comments": 7,
+        "blank": 9,
+        "commentRatio": 0.03211009174311927
+      },
+      "complexity": [
+        {
+          "name": "function1",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 70.04,
+      "ownership": {
+        "<global>": [
+          "function1"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Decimal_to_binary_convertor_and_vice_versa\\decimal_to_binary.py",
+      "fileName": "decimal_to_binary.py",
+      "fileStats": {
+        "loc": 12,
+        "comments": 0,
+        "blank": 0,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 63.15,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\detect_align_faces\\main.py",
+      "fileName": "main.py",
+      "fileStats": {
+        "loc": 74,
+        "comments": 4,
+        "blank": 18,
+        "commentRatio": 0.05405405405405406
+      },
+      "complexity": [
+        {
+          "name": "main",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "detect_align_faces",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "shape_to_pos",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 59.28,
+      "ownership": {
+        "<global>": [
+          "main",
+          "detect_align_faces",
+          "shape_to_pos"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Diff_Util\\diff.py",
+      "fileName": "diff.py",
+      "fileStats": {
+        "loc": 48,
+        "comments": 10,
+        "blank": 9,
+        "commentRatio": 0.20833333333333334
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 80.35,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Digital_clock\\digital_clock.py",
+      "fileName": "digital_clock.py",
+      "fileStats": {
+        "loc": 56,
+        "comments": 0,
+        "blank": 11,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "light_theme",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "dark_theme",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "time",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "time",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "time",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {
+        "<global>": [
+          "light_theme",
+          "dark_theme",
+          "time",
+          "time",
+          "time"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Dns_record\\dns_record.py",
+      "fileName": "dns_record.py",
+      "fileStats": {
+        "loc": 29,
+        "comments": 7,
+        "blank": 8,
+        "commentRatio": 0.2413793103448276
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 98.66,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Dominant_color\\find-color.py",
+      "fileName": "find-color.py",
+      "fileStats": {
+        "loc": 39,
+        "comments": 4,
+        "blank": 12,
+        "commentRatio": 0.10256410256410256
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 82.73,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\dork_search_google\\main.py",
+      "fileName": "main.py",
+      "fileStats": {
+        "loc": 76,
+        "comments": 13,
+        "blank": 9,
+        "commentRatio": 0.17105263157894737
+      },
+      "complexity": [
+        {
+          "name": "Exploit",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function Exploit() (should be snake_case)",
+          "line": 40
+        }
+      ],
+      "maintainabilityIndex": 83.97,
+      "ownership": {
+        "<global>": [
+          "Exploit"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\download GeeksForGeeks articles\\downloader.py",
+      "fileName": "downloader.py",
+      "fileStats": {
+        "loc": 54,
+        "comments": 7,
+        "blank": 10,
+        "commentRatio": 0.12962962962962962
+      },
+      "complexity": [
+        {
+          "name": "get_driver",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "download_article",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 82.48,
+      "ownership": {
+        "<global>": [
+          "get_driver",
+          "download_article"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Download_images_from_website\\scrap-img.py",
+      "fileName": "scrap-img.py",
+      "fileStats": {
+        "loc": 59,
+        "comments": 1,
+        "blank": 15,
+        "commentRatio": 0.01694915254237288
+      },
+      "complexity": [
+        {
+          "name": "get_url",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "get_img_links",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "download_img",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 59.83,
+      "ownership": {
+        "<global>": [
+          "get_url",
+          "get_img_links",
+          "download_img"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Drowsiness detection\\drowsiness detection.py",
+      "fileName": "drowsiness detection.py",
+      "fileStats": {
+        "loc": 106,
+        "comments": 3,
+        "blank": 18,
+        "commentRatio": 0.02830188679245283
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 47.14,
+      "ownership": {},
+      "deadCode": [
+        "time (import)",
+        "lbl (variable)",
+        "ret (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Drowsiness detection\\model.py",
+      "fileName": "model.py",
+      "fileStats": {
+        "loc": 57,
+        "comments": 11,
+        "blank": 12,
+        "commentRatio": 0.19298245614035087
+      },
+      "complexity": [
+        {
+          "name": "generator",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Many Parameters"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Many Parameters",
+          "message": "generator() (6 parameters)",
+          "line": 12
+        }
+      ],
+      "maintainabilityIndex": 88.36,
+      "ownership": {
+        "<global>": [
+          "generator"
+        ]
+      },
+      "deadCode": [
+        "os (import)",
+        "plt (import)",
+        "np (import)",
+        "to_categorical (import)",
+        "random (import)",
+        "shutil (import)",
+        "BatchNormalization (import)",
+        "load_model (import)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Duplicate files remover\\duplicatefileremover.py",
+      "fileName": "duplicatefileremover.py",
+      "fileStats": {
+        "loc": 40,
+        "comments": 6,
+        "blank": 6,
+        "commentRatio": 0.15
+      },
+      "complexity": [
+        {
+          "name": "hashFile",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function hashFile() (should be snake_case)",
+          "line": 7
+        }
+      ],
+      "maintainabilityIndex": 79.72,
+      "ownership": {
+        "<global>": [
+          "hashFile"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\EasyVideoPlayer\\EasyVideoPlayer.py",
+      "fileName": "EasyVideoPlayer.py",
+      "fileStats": {
+        "loc": 60,
+        "comments": 7,
+        "blank": 18,
+        "commentRatio": 0.11666666666666667
+      },
+      "complexity": [
+        {
+          "name": "find_the_video",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "PlayVideo",
+          "value": 6,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function PlayVideo() (should be snake_case)",
+          "line": 40
+        }
+      ],
+      "maintainabilityIndex": 74.48,
+      "ownership": {
+        "<global>": [
+          "find_the_video",
+          "PlayVideo"
+        ]
+      },
+      "deadCode": [
+        "subdirs (variable)",
+        "img (variable)",
+        "t (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Easy_cartoonify\\easy_cartoonify.py",
+      "fileName": "easy_cartoonify.py",
+      "fileStats": {
+        "loc": 45,
+        "comments": 12,
+        "blank": 10,
+        "commentRatio": 0.26666666666666666
+      },
+      "complexity": [
+        {
+          "name": "find_the_image",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 85.18,
+      "ownership": {
+        "<global>": [
+          "find_the_image"
+        ]
+      },
+      "deadCode": [
+        "subdirs (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Encrypt_and_decrypt_text\\aes_encode.py",
+      "fileName": "aes_encode.py",
+      "fileStats": {
+        "loc": 38,
+        "comments": 10,
+        "blank": 10,
+        "commentRatio": 0.2631578947368421
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 94.65,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\export_mysql_to_csv_send_to_wocom\\export_mysql_data_to_csv.py",
+      "fileName": "export_mysql_data_to_csv.py",
+      "fileStats": {
+        "loc": 56,
+        "comments": 9,
+        "blank": 12,
+        "commentRatio": 0.16071428571428573
+      },
+      "complexity": [
+        {
+          "name": "sql",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "read_mysql_to_csv",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "upload_file_robots",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "send_file_robots",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 75.5,
+      "ownership": {
+        "<global>": [
+          "sql",
+          "read_mysql_to_csv",
+          "upload_file_robots",
+          "send_file_robots"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Extract_zip_files\\extract_zip_files.py",
+      "fileName": "extract_zip_files.py",
+      "fileStats": {
+        "loc": 35,
+        "comments": 6,
+        "blank": 7,
+        "commentRatio": 0.17142857142857143
+      },
+      "complexity": [
+        {
+          "name": "extract",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 86.11,
+      "ownership": {
+        "<global>": [
+          "extract"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Fetch HTTP status code\\fetch_http_status_code.py",
+      "fileName": "fetch_http_status_code.py",
+      "fileStats": {
+        "loc": 22,
+        "comments": 6,
+        "blank": 2,
+        "commentRatio": 0.2727272727272727
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 87.77,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Fetch_and_store_tweets\\fetch_store_tweet.py",
+      "fileName": "fetch_store_tweet.py",
+      "fileStats": {
+        "loc": 24,
+        "comments": 3,
+        "blank": 4,
+        "commentRatio": 0.125
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Fetch_current_weather\\fetch_current_weather.py",
+      "fileName": "fetch_current_weather.py",
+      "fileStats": {
+        "loc": 35,
+        "comments": 4,
+        "blank": 7,
+        "commentRatio": 0.11428571428571428
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 79.17,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Fetch_open_ports\\fetch_open_port.py",
+      "fileName": "fetch_open_port.py",
+      "fileStats": {
+        "loc": 17,
+        "comments": 0,
+        "blank": 3,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 63.13,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Find_imdb_rating\\find_IMDb_rating.py",
+      "fileName": "find_IMDb_rating.py",
+      "fileStats": {
+        "loc": 79,
+        "comments": 24,
+        "blank": 18,
+        "commentRatio": 0.3037974683544304
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 85.49,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Find_out_hostname_and_ip_address\\Hostname_IPaddress.py",
+      "fileName": "Hostname_IPaddress.py",
+      "fileStats": {
+        "loc": 13,
+        "comments": 1,
+        "blank": 3,
+        "commentRatio": 0.07692307692307693
+      },
+      "complexity": [
+        {
+          "name": "get_hostname_IP",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function get_hostname_IP() (should be snake_case)",
+          "line": 4
+        }
+      ],
+      "maintainabilityIndex": 100.0,
+      "ownership": {
+        "<global>": [
+          "get_hostname_IP"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Games\\QuizGame.py",
+      "fileName": "QuizGame.py",
+      "fileStats": {
+        "loc": 49,
+        "comments": 0,
+        "blank": 9,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 47.38,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Geocoding\\geocoding.py",
+      "fileName": "geocoding.py",
+      "fileStats": {
+        "loc": 25,
+        "comments": 3,
+        "blank": 7,
+        "commentRatio": 0.12
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Get_meta_information_of_images\\author_utils.py",
+      "fileName": "author_utils.py",
+      "fileStats": {
+        "loc": 171,
+        "comments": 23,
+        "blank": 27,
+        "commentRatio": 0.13450292397660818
+      },
+      "complexity": [
+        {
+          "name": "_check_bool",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "look_up_account_sid",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "get_file_security",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "get_author",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 3,
+          "type": "method",
+          "class": "SID_NAME_USE",
+          "issues": []
+        },
+        {
+          "name": "__str__",
+          "value": 2,
+          "type": "method",
+          "class": "SID_NAME_USE",
+          "issues": []
+        },
+        {
+          "name": "__repr__",
+          "value": 1,
+          "type": "method",
+          "class": "SID_NAME_USE",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "PLOCAL",
+          "issues": []
+        },
+        {
+          "name": "__del__",
+          "value": 3,
+          "type": "method",
+          "class": "PLOCAL",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "PSID",
+          "issues": []
+        },
+        {
+          "name": "__str__",
+          "value": 3,
+          "type": "method",
+          "class": "PSID",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "PSECURITY_DESCRIPTOR",
+          "issues": []
+        },
+        {
+          "name": "get_owner",
+          "value": 3,
+          "type": "method",
+          "class": "PSECURITY_DESCRIPTOR",
+          "issues": []
+        },
+        {
+          "name": "get_group",
+          "value": 3,
+          "type": "method",
+          "class": "PSECURITY_DESCRIPTOR",
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function _check_bool() (should be snake_case)",
+          "line": 103
+        }
+      ],
+      "maintainabilityIndex": 56.92,
+      "ownership": {
+        "<global>": [
+          "_check_bool",
+          "look_up_account_sid",
+          "get_file_security",
+          "get_author"
+        ],
+        "SID_NAME_USE": [
+          "__init__",
+          "__str__",
+          "__repr__"
+        ],
+        "PLOCAL": [
+          "__init__",
+          "__del__"
+        ],
+        "PSID": [
+          "__init__",
+          "__str__"
+        ],
+        "PSECURITY_DESCRIPTOR": [
+          "__init__",
+          "get_owner",
+          "get_group"
+        ]
+      },
+      "deadCode": [
+        "ERROR_INVALID_FUNCTION (variable)",
+        "ERROR_FILE_NOT_FOUND (variable)",
+        "ERROR_PATH_NOT_FOUND (variable)",
+        "ERROR_ACCESS_DENIED (variable)",
+        "ERROR_SHARING_VIOLATION (variable)",
+        "SACL_SECURITY_INFORMATION (variable)",
+        "_SD (attribute)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Get_meta_information_of_images\\get_meta_from_pic.py",
+      "fileName": "get_meta_from_pic.py",
+      "fileStats": {
+        "loc": 60,
+        "comments": 6,
+        "blank": 14,
+        "commentRatio": 0.1
+      },
+      "complexity": [
+        {
+          "name": "get_exif",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "get_labeled_exif",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 69.8,
+      "ownership": {
+        "<global>": [
+          "get_exif",
+          "get_labeled_exif"
+        ]
+      },
+      "deadCode": [
+        "get_file_security (import)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Get_meta_information_of_images\\gps_utils.py",
+      "fileName": "gps_utils.py",
+      "fileStats": {
+        "loc": 23,
+        "comments": 0,
+        "blank": 2,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "format_lati_long",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "get_location",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Dead Code"
+          ]
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 55.18,
+      "ownership": {
+        "<global>": [
+          "format_lati_long",
+          "get_location"
+        ]
+      },
+      "deadCode": [
+        "requests (import)",
+        "get_location (function)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Get_wifi_password\\wifi.py",
+      "fileName": "wifi.py",
+      "fileStats": {
+        "loc": 20,
+        "comments": 0,
+        "blank": 1,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 65.38,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\GUI Rock-Paper-Scissors Game\\Rock-Paper-Scissors Game.py",
+      "fileName": "Rock-Paper-Scissors Game.py",
+      "fileStats": {
+        "loc": 74,
+        "comments": 7,
+        "blank": 16,
+        "commentRatio": 0.0945945945945946
+      },
+      "complexity": [
+        {
+          "name": "spin",
+          "value": 16,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "High complexity (>10)",
+            "Long Function",
+            "Deep Nesting"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "spin() (36 lines)",
+          "line": 23
+        },
+        {
+          "type": "Deep Nesting",
+          "message": "spin() (depth 5)",
+          "line": 23
+        }
+      ],
+      "maintainabilityIndex": 63.23,
+      "ownership": {
+        "<global>": [
+          "spin"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Hashing_passwords\\hashing_passwords.py",
+      "fileName": "hashing_passwords.py",
+      "fileStats": {
+        "loc": 19,
+        "comments": 4,
+        "blank": 3,
+        "commentRatio": 0.21052631578947367
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 95.53,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Hello\\Hello.py",
+      "fileName": "Hello.py",
+      "fileStats": {
+        "loc": 3,
+        "comments": 1,
+        "blank": 1,
+        "commentRatio": 0.3333333333333333
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Image_watermark\\watermark.py",
+      "fileName": "watermark.py",
+      "fileStats": {
+        "loc": 45,
+        "comments": 7,
+        "blank": 6,
+        "commentRatio": 0.15555555555555556
+      },
+      "complexity": [
+        {
+          "name": "watermark_photo",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 74.17,
+      "ownership": {
+        "<global>": [
+          "watermark_photo"
+        ]
+      },
+      "deadCode": [
+        "c (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Instagram_profile\\InstgramProfile.py",
+      "fileName": "InstgramProfile.py",
+      "fileStats": {
+        "loc": 53,
+        "comments": 1,
+        "blank": 6,
+        "commentRatio": 0.018867924528301886
+      },
+      "complexity": [
+        {
+          "name": "main",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Long Function"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "main() (35 lines)",
+          "line": 7
+        }
+      ],
+      "maintainabilityIndex": 71.56,
+      "ownership": {
+        "<global>": [
+          "main"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Instagram_profile\\main.py",
+      "fileName": "main.py",
+      "fileStats": {
+        "loc": 62,
+        "comments": 1,
+        "blank": 9,
+        "commentRatio": 0.016129032258064516
+      },
+      "complexity": [
+        {
+          "name": "banner",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "main",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Long Function"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "main() (37 lines)",
+          "line": 14
+        }
+      ],
+      "maintainabilityIndex": 69.47,
+      "ownership": {
+        "<global>": [
+          "banner",
+          "main"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Instagram_profile\\profilepic.py",
+      "fileName": "profilepic.py",
+      "fileStats": {
+        "loc": 59,
+        "comments": 2,
+        "blank": 11,
+        "commentRatio": 0.03389830508474576
+      },
+      "complexity": [
+        {
+          "name": "pp_download",
+          "value": 13,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "High complexity (>10)",
+            "Long Function",
+            "Deep Nesting",
+            "Dead Code"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "pp_download() (52 lines)",
+          "line": 8
+        },
+        {
+          "type": "Deep Nesting",
+          "message": "pp_download() (depth 4)",
+          "line": 8
+        }
+      ],
+      "maintainabilityIndex": 61.05,
+      "ownership": {
+        "<global>": [
+          "pp_download"
+        ]
+      },
+      "deadCode": [
+        "pp_download (function)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Internet_connection_check\\internet_connection_check.py",
+      "fileName": "internet_connection_check.py",
+      "fileStats": {
+        "loc": 23,
+        "comments": 0,
+        "blank": 3,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "internet_connection_test",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {
+        "<global>": [
+          "internet_connection_test"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Language_translator\\translator.py",
+      "fileName": "translator.py",
+      "fileStats": {
+        "loc": 62,
+        "comments": 12,
+        "blank": 12,
+        "commentRatio": 0.1935483870967742
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 80.72,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Leap_Year_Checker\\leapyear.py",
+      "fileName": "leapyear.py",
+      "fileStats": {
+        "loc": 12,
+        "comments": 1,
+        "blank": 1,
+        "commentRatio": 0.08333333333333333
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 85.69,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\MasterMind\\Mastermind_GUIinterface.py",
+      "fileName": "Mastermind_GUIinterface.py",
+      "fileStats": {
+        "loc": 99,
+        "comments": 12,
+        "blank": 0,
+        "commentRatio": 0.12121212121212122
+      },
+      "complexity": [
+        {
+          "name": "user",
+          "value": 1,
+          "type": "method",
+          "class": "medium",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 3,
+          "type": "method",
+          "class": "medium",
+          "issues": []
+        },
+        {
+          "name": "compare",
+          "value": 4,
+          "type": "method",
+          "class": "medium",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 4,
+          "type": "method",
+          "class": "MasterMind",
+          "issues": []
+        },
+        {
+          "name": "guess",
+          "value": 7,
+          "type": "method",
+          "class": "MasterMind",
+          "issues": [
+            "Long Function"
+          ]
+        },
+        {
+          "name": "hint",
+          "value": 2,
+          "type": "method",
+          "class": "MasterMind",
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "guess() (36 lines)",
+          "line": 51
+        }
+      ],
+      "maintainabilityIndex": 54.48,
+      "ownership": {
+        "medium": [
+          "user",
+          "__init__",
+          "compare"
+        ],
+        "MasterMind": [
+          "__init__",
+          "guess",
+          "hint"
+        ]
+      },
+      "deadCode": [
+        "M (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Merge_csv_files\\merge_csv_files.py",
+      "fileName": "merge_csv_files.py",
+      "fileStats": {
+        "loc": 8,
+        "comments": 0,
+        "blank": 2,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Merge_pdfs\\merge_pdfs.py",
+      "fileName": "merge_pdfs.py",
+      "fileStats": {
+        "loc": 28,
+        "comments": 5,
+        "blank": 8,
+        "commentRatio": 0.17857142857142858
+      },
+      "complexity": [
+        {
+          "name": "by_appending",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "by_inserting",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 96.55,
+      "ownership": {
+        "<global>": [
+          "by_appending",
+          "by_inserting"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Movie Information Scraper\\movieInfoScraper.py",
+      "fileName": "movieInfoScraper.py",
+      "fileStats": {
+        "loc": 100,
+        "comments": 16,
+        "blank": 21,
+        "commentRatio": 0.16
+      },
+      "complexity": [
+        {
+          "name": "getMovieDetails",
+          "value": 11,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "High complexity (>10)",
+            "Long Function",
+            "Inconsistent Naming"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "getMovieDetails() (76 lines)",
+          "line": 7
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function getMovieDetails() (should be snake_case)",
+          "line": 7
+        }
+      ],
+      "maintainabilityIndex": 69.24,
+      "ownership": {
+        "<global>": [
+          "getMovieDetails"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Multi_language_OCR\\multi_language_OCR.py",
+      "fileName": "multi_language_OCR.py",
+      "fileStats": {
+        "loc": 63,
+        "comments": 8,
+        "blank": 4,
+        "commentRatio": 0.12698412698412698
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Network Usage Tracker\\network_usage_tracker.py",
+      "fileName": "network_usage_tracker.py",
+      "fileStats": {
+        "loc": 114,
+        "comments": 26,
+        "blank": 26,
+        "commentRatio": 0.22807017543859648
+      },
+      "complexity": [
+        {
+          "name": "start_fun",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "exit_win",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "convert_to_gbit",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Dead Code"
+          ]
+        },
+        {
+          "name": "update_label",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "exit_win",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 72.19,
+      "ownership": {
+        "<global>": [
+          "start_fun",
+          "exit_win",
+          "convert_to_gbit",
+          "update_label",
+          "exit_win"
+        ]
+      },
+      "deadCode": [
+        "convert_to_gbit (function)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\News_website_scraper\\moneycontrol_scrapper.py",
+      "fileName": "moneycontrol_scrapper.py",
+      "fileStats": {
+        "loc": 52,
+        "comments": 7,
+        "blank": 10,
+        "commentRatio": 0.1346153846153846
+      },
+      "complexity": [
+        {
+          "name": "setup",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "scrap",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "json_dump",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 77.81,
+      "ownership": {
+        "<global>": [
+          "setup",
+          "scrap",
+          "json_dump"
+        ]
+      },
+      "deadCode": [
+        "data (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Number_guessing_game\\main.py",
+      "fileName": "main.py",
+      "fileStats": {
+        "loc": 54,
+        "comments": 25,
+        "blank": 12,
+        "commentRatio": 0.46296296296296297
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 81.18,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Organized_download_folder_with_different_categories\\file-sortor.py",
+      "fileName": "file-sortor.py",
+      "fileStats": {
+        "loc": 47,
+        "comments": 6,
+        "blank": 9,
+        "commentRatio": 0.1276595744680851
+      },
+      "complexity": [
+        {
+          "name": "sorting",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 82.43,
+      "ownership": {
+        "<global>": [
+          "sorting"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Password_generator\\password_generator.py",
+      "fileName": "password_generator.py",
+      "fileStats": {
+        "loc": 41,
+        "comments": 2,
+        "blank": 7,
+        "commentRatio": 0.04878048780487805
+      },
+      "complexity": [
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "App",
+          "issues": []
+        },
+        {
+          "name": "label",
+          "value": 1,
+          "type": "method",
+          "class": "App",
+          "issues": []
+        },
+        {
+          "name": "entry",
+          "value": 1,
+          "type": "method",
+          "class": "App",
+          "issues": []
+        },
+        {
+          "name": "button",
+          "value": 1,
+          "type": "method",
+          "class": "App",
+          "issues": []
+        },
+        {
+          "name": "generate_password",
+          "value": 2,
+          "type": "method",
+          "class": "App",
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 70.88,
+      "ownership": {
+        "App": [
+          "__init__",
+          "label",
+          "entry",
+          "button",
+          "generate_password"
+        ]
+      },
+      "deadCode": [
+        "x (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\PDF to MP3\\PDF__TO__MP3.py",
+      "fileName": "PDF__TO__MP3.py",
+      "fileStats": {
+        "loc": 47,
+        "comments": 0,
+        "blank": 12,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 55.96,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Plagarism_checker\\plag.py",
+      "fileName": "plag.py",
+      "fileStats": {
+        "loc": 36,
+        "comments": 2,
+        "blank": 9,
+        "commentRatio": 0.05555555555555555
+      },
+      "complexity": [
+        {
+          "name": "vectorize",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "similarity",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "check_plagiarism",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {
+        "<global>": [
+          "vectorize",
+          "similarity",
+          "check_plagiarism"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Python_auto_draw\\python-auto-draw.py",
+      "fileName": "python-auto-draw.py",
+      "fileStats": {
+        "loc": 29,
+        "comments": 7,
+        "blank": 10,
+        "commentRatio": 0.2413793103448276
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 94.74,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Qr_code_generator\\generate_qrcode.py",
+      "fileName": "generate_qrcode.py",
+      "fileStats": {
+        "loc": 18,
+        "comments": 0,
+        "blank": 5,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Random_password_generator\\python-password-generator.py",
+      "fileName": "python-password-generator.py",
+      "fileStats": {
+        "loc": 10,
+        "comments": 0,
+        "blank": 4,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 74.88,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Random_password_generator\\random_password_gen.py",
+      "fileName": "random_password_gen.py",
+      "fileStats": {
+        "loc": 43,
+        "comments": 7,
+        "blank": 9,
+        "commentRatio": 0.16279069767441862
+      },
+      "complexity": [
+        {
+          "name": "generate_pass",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 79.48,
+      "ownership": {
+        "<global>": [
+          "generate_pass"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Random_Wikipedia_Article\\wiki_random.py",
+      "fileName": "wiki_random.py",
+      "fileStats": {
+        "loc": 25,
+        "comments": 6,
+        "blank": 7,
+        "commentRatio": 0.24
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Random_word_from_list\\Random_word_from_list.py",
+      "fileName": "Random_word_from_list.py",
+      "fileStats": {
+        "loc": 29,
+        "comments": 6,
+        "blank": 6,
+        "commentRatio": 0.20689655172413793
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 94.15,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Recursive_password_generator\\generator.py",
+      "fileName": "generator.py",
+      "fileStats": {
+        "loc": 24,
+        "comments": 0,
+        "blank": 3,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "stretch",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "get_random_char",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 59.05,
+      "ownership": {
+        "<global>": [
+          "stretch",
+          "get_random_char"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Reduce_image_file_size\\reduce_image_size.py",
+      "fileName": "reduce_image_size.py",
+      "fileStats": {
+        "loc": 23,
+        "comments": 6,
+        "blank": 5,
+        "commentRatio": 0.2608695652173913
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 97.84,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\RockPaperScissors_Game\\Rock_Paper_Scissors_Game.py",
+      "fileName": "Rock_Paper_Scissors_Game.py",
+      "fileStats": {
+        "loc": 60,
+        "comments": 14,
+        "blank": 15,
+        "commentRatio": 0.23333333333333334
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 73.59,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\S3_File_Upload\\main.py",
+      "fileName": "main.py",
+      "fileStats": {
+        "loc": 26,
+        "comments": 1,
+        "blank": 4,
+        "commentRatio": 0.038461538461538464
+      },
+      "complexity": [
+        {
+          "name": "upload_to_s3",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {
+        "<global>": [
+          "upload_to_s3"
+        ]
+      },
+      "deadCode": [
+        "result (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Scrape_Hacker_News\\main.py",
+      "fileName": "main.py",
+      "fileStats": {
+        "loc": 99,
+        "comments": 2,
+        "blank": 4,
+        "commentRatio": 0.020202020202020204
+      },
+      "complexity": [
+        {
+          "name": "fetch",
+          "value": 17,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "High complexity (>10)",
+            "Long Function"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "fetch() (68 lines)",
+          "line": 15
+        }
+      ],
+      "maintainabilityIndex": 55.16,
+      "ownership": {
+        "<global>": [
+          "fetch"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Scrape_quotes\\quote_scraper.py",
+      "fileName": "quote_scraper.py",
+      "fileStats": {
+        "loc": 49,
+        "comments": 10,
+        "blank": 11,
+        "commentRatio": 0.20408163265306123
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 86.54,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Scraping Medium Articles\\scraping_medium.py",
+      "fileName": "scraping_medium.py",
+      "fileStats": {
+        "loc": 71,
+        "comments": 7,
+        "blank": 9,
+        "commentRatio": 0.09859154929577464
+      },
+      "complexity": [
+        {
+          "name": "get_page",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "purify",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "collect_text",
+          "value": 5,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "save_file",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 64.1,
+      "ownership": {
+        "<global>": [
+          "get_page",
+          "purify",
+          "collect_text",
+          "save_file"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Send_email_from_csv\\Sending_mail.py",
+      "fileName": "Sending_mail.py",
+      "fileStats": {
+        "loc": 52,
+        "comments": 4,
+        "blank": 12,
+        "commentRatio": 0.07692307692307693
+      },
+      "complexity": [
+        {
+          "name": "get_credentials",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "login",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "send_mail",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 77.05,
+      "ownership": {
+        "<global>": [
+          "get_credentials",
+          "login",
+          "send_mail"
+        ]
+      },
+      "deadCode": [
+        "filepath (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Set_Alarm\\alarm.py",
+      "fileName": "alarm.py",
+      "fileStats": {
+        "loc": 76,
+        "comments": 0,
+        "blank": 17,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "rename_files_with_whitespaces",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "clean_filename",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "set_alarm",
+          "value": 10,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Long Function",
+            "Deep Nesting"
+          ]
+        },
+        {
+          "name": "display_header",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "set_alarm() (49 lines)",
+          "line": 18
+        },
+        {
+          "type": "Deep Nesting",
+          "message": "set_alarm() (depth 4)",
+          "line": 18
+        }
+      ],
+      "maintainabilityIndex": 43.79,
+      "ownership": {
+        "<global>": [
+          "rename_files_with_whitespaces",
+          "clean_filename",
+          "set_alarm",
+          "display_header"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Shutdown_or_restart_your_device\\PowerOptions.py",
+      "fileName": "PowerOptions.py",
+      "fileStats": {
+        "loc": 28,
+        "comments": 0,
+        "blank": 5,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "shutdown",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "restart",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 54.24,
+      "ownership": {
+        "<global>": [
+          "shutdown",
+          "restart"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Sine_Wave\\sine_wave.py",
+      "fileName": "sine_wave.py",
+      "fileStats": {
+        "loc": 19,
+        "comments": 6,
+        "blank": 4,
+        "commentRatio": 0.3157894736842105
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 90.89,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Snake Game\\snake_game.py",
+      "fileName": "snake_game.py",
+      "fileStats": {
+        "loc": 163,
+        "comments": 0,
+        "blank": 57,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "next_turn",
+          "value": 8,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Long Function"
+          ]
+        },
+        {
+          "name": "change_direction",
+          "value": 9,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Deep Nesting"
+          ]
+        },
+        {
+          "name": "check_collisions",
+          "value": 8,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "game_over",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 3,
+          "type": "method",
+          "class": "Snake",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "Food",
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "next_turn() (44 lines)",
+          "line": 41
+        },
+        {
+          "type": "Deep Nesting",
+          "message": "change_direction() (depth 4)",
+          "line": 87
+        }
+      ],
+      "maintainabilityIndex": 31.16,
+      "ownership": {
+        "<global>": [
+          "next_turn",
+          "change_direction",
+          "check_collisions",
+          "game_over"
+        ],
+        "Snake": [
+          "__init__"
+        ],
+        "Food": [
+          "__init__"
+        ]
+      },
+      "deadCode": [
+        "body_size (attribute)",
+        "i (variable)",
+        "event (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Snapshot_of_given_website\\snapshot_of_given_website.py",
+      "fileName": "snapshot_of_given_website.py",
+      "fileStats": {
+        "loc": 26,
+        "comments": 1,
+        "blank": 6,
+        "commentRatio": 0.038461538461538464
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 80.48,
+      "ownership": {},
+      "deadCode": [
+        "chromedriver_binary (import)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Solver_linear_equations\\linearEquations.py",
+      "fileName": "linearEquations.py",
+      "fileStats": {
+        "loc": 44,
+        "comments": 2,
+        "blank": 12,
+        "commentRatio": 0.045454545454545456
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 66.7,
+      "ownership": {},
+      "deadCode": [
+        "Axes3D (import)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Space_bullet_shooter_game\\space_bullet_shooter.py",
+      "fileName": "space_bullet_shooter.py",
+      "fileStats": {
+        "loc": 312,
+        "comments": 24,
+        "blank": 151,
+        "commentRatio": 0.07692307692307693
+      },
+      "complexity": [
+        {
+          "name": "player",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "enemy",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "fire_bullet",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "is_collision",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "showscore",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "game_over",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "final_score",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "author_name",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 55.36,
+      "ownership": {
+        "<global>": [
+          "player",
+          "enemy",
+          "fire_bullet",
+          "is_collision",
+          "showscore",
+          "game_over",
+          "final_score",
+          "author_name"
+        ]
+      },
+      "deadCode": [
+        "clock (variable)",
+        "bulletX_change (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Speaking_Dictionary\\SpeakingDictionary.py",
+      "fileName": "SpeakingDictionary.py",
+      "fileStats": {
+        "loc": 83,
+        "comments": 12,
+        "blank": 20,
+        "commentRatio": 0.14457831325301204
+      },
+      "complexity": [
+        {
+          "name": "SpeakWord",
+          "value": 1,
+          "type": "method",
+          "class": "Speak",
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Method SpeakWord() (should be snake_case)",
+          "line": 9
+        }
+      ],
+      "maintainabilityIndex": 72.02,
+      "ownership": {
+        "Speak": [
+          "SpeakWord"
+        ]
+      },
+      "deadCode": [
+        "gTTS (import)",
+        "os (import)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Speech_to_text\\speech_to_text.py",
+      "fileName": "speech_to_text.py",
+      "fileStats": {
+        "loc": 23,
+        "comments": 0,
+        "blank": 6,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "record_voice",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 68.01,
+      "ownership": {
+        "<global>": [
+          "record_voice"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Speed_Game\\macOS\\main.py",
+      "fileName": "main.py",
+      "fileStats": {
+        "loc": 272,
+        "comments": 10,
+        "blank": 51,
+        "commentRatio": 0.03676470588235294
+      },
+      "complexity": [
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "SampleApp",
+          "issues": []
+        },
+        {
+          "name": "switch_frame",
+          "value": 2,
+          "type": "method",
+          "class": "SampleApp",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "StartPage",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "CategoryPage",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 2,
+          "type": "method",
+          "class": "CountryPage",
+          "issues": [
+            "Long Function"
+          ]
+        },
+        {
+          "name": "count",
+          "value": 3,
+          "type": "method",
+          "class": "CountryPage",
+          "issues": []
+        },
+        {
+          "name": "checkBtn_click",
+          "value": 4,
+          "type": "method",
+          "class": "CountryPage",
+          "issues": [
+            "Long Function",
+            "Many Parameters",
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "passBtn_click",
+          "value": 3,
+          "type": "method",
+          "class": "CountryPage",
+          "issues": [
+            "Long Function",
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "delete_img",
+          "value": 1,
+          "type": "method",
+          "class": "CountryPage",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "FinishPage",
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Class",
+          "message": "CountryPage (156 lines)",
+          "line": 82
+        },
+        {
+          "type": "Long Function",
+          "message": "__init__() (60 lines)",
+          "line": 83
+        },
+        {
+          "type": "Long Function",
+          "message": "checkBtn_click() (42 lines)",
+          "line": 161
+        },
+        {
+          "type": "Many Parameters",
+          "message": "checkBtn_click() (6 parameters)",
+          "line": 161
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Method checkBtn_click() (should be snake_case)",
+          "line": 161
+        },
+        {
+          "type": "Long Function",
+          "message": "passBtn_click() (31 lines)",
+          "line": 204
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Method passBtn_click() (should be snake_case)",
+          "line": 204
+        }
+      ],
+      "maintainabilityIndex": 38.33,
+      "ownership": {
+        "SampleApp": [
+          "__init__",
+          "switch_frame"
+        ],
+        "StartPage": [
+          "__init__"
+        ],
+        "CategoryPage": [
+          "__init__"
+        ],
+        "CountryPage": [
+          "__init__",
+          "count",
+          "checkBtn_click",
+          "passBtn_click",
+          "delete_img"
+        ],
+        "FinishPage": [
+          "__init__"
+        ]
+      },
+      "deadCode": [
+        "time (import)",
+        "threading (import)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Speed_Game\\windows\\main.py",
+      "fileName": "main.py",
+      "fileStats": {
+        "loc": 275,
+        "comments": 7,
+        "blank": 53,
+        "commentRatio": 0.025454545454545455
+      },
+      "complexity": [
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "SampleApp",
+          "issues": []
+        },
+        {
+          "name": "switch_frame",
+          "value": 2,
+          "type": "method",
+          "class": "SampleApp",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "StartPage",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "CategoryPage",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 2,
+          "type": "method",
+          "class": "CountryPage",
+          "issues": [
+            "Long Function"
+          ]
+        },
+        {
+          "name": "count",
+          "value": 3,
+          "type": "method",
+          "class": "CountryPage",
+          "issues": []
+        },
+        {
+          "name": "checkBtn_click",
+          "value": 4,
+          "type": "method",
+          "class": "CountryPage",
+          "issues": [
+            "Long Function",
+            "Many Parameters",
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "passBtn_click",
+          "value": 3,
+          "type": "method",
+          "class": "CountryPage",
+          "issues": [
+            "Long Function",
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "delete_img",
+          "value": 1,
+          "type": "method",
+          "class": "CountryPage",
+          "issues": []
+        },
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "FinishPage",
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Class",
+          "message": "CountryPage (156 lines)",
+          "line": 85
+        },
+        {
+          "type": "Long Function",
+          "message": "__init__() (60 lines)",
+          "line": 86
+        },
+        {
+          "type": "Long Function",
+          "message": "checkBtn_click() (42 lines)",
+          "line": 164
+        },
+        {
+          "type": "Many Parameters",
+          "message": "checkBtn_click() (6 parameters)",
+          "line": 164
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Method checkBtn_click() (should be snake_case)",
+          "line": 164
+        },
+        {
+          "type": "Long Function",
+          "message": "passBtn_click() (31 lines)",
+          "line": 207
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Method passBtn_click() (should be snake_case)",
+          "line": 207
+        }
+      ],
+      "maintainabilityIndex": 36.02,
+      "ownership": {
+        "SampleApp": [
+          "__init__",
+          "switch_frame"
+        ],
+        "StartPage": [
+          "__init__"
+        ],
+        "CategoryPage": [
+          "__init__"
+        ],
+        "CountryPage": [
+          "__init__",
+          "count",
+          "checkBtn_click",
+          "passBtn_click",
+          "delete_img"
+        ],
+        "FinishPage": [
+          "__init__"
+        ]
+      },
+      "deadCode": [
+        "time (import)",
+        "threading (import)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Spell_checker\\spell_checker.py",
+      "fileName": "spell_checker.py",
+      "fileStats": {
+        "loc": 12,
+        "comments": 5,
+        "blank": 3,
+        "commentRatio": 0.4166666666666667
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Split_a_video_file_by_given_time_period\\videosplitter.py",
+      "fileName": "videosplitter.py",
+      "fileStats": {
+        "loc": 24,
+        "comments": 0,
+        "blank": 7,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Split_File\\split_files.py",
+      "fileName": "split_files.py",
+      "fileStats": {
+        "loc": 55,
+        "comments": 0,
+        "blank": 5,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "__init__",
+          "value": 3,
+          "type": "method",
+          "class": "Split_Files",
+          "issues": []
+        },
+        {
+          "name": "split_data",
+          "value": 5,
+          "type": "method",
+          "class": "Split_Files",
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 75.06,
+      "ownership": {
+        "Split_Files": [
+          "__init__",
+          "split_data"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Split_folder_into_subfolders\\split_and_copy.py",
+      "fileName": "split_and_copy.py",
+      "fileStats": {
+        "loc": 74,
+        "comments": 0,
+        "blank": 15,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "get_files",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "getfullpath",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "copyfiles",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "split",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "start_process",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 76.12,
+      "ownership": {
+        "<global>": [
+          "get_files",
+          "getfullpath",
+          "copyfiles",
+          "split",
+          "start_process"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\steganography\\dct.py",
+      "fileName": "dct.py",
+      "fileStats": {
+        "loc": 127,
+        "comments": 16,
+        "blank": 14,
+        "commentRatio": 0.12598425196850394
+      },
+      "complexity": [
+        {
+          "name": "insert",
+          "value": 7,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Long Function"
+          ]
+        },
+        {
+          "name": "encode",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "decode",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "extract",
+          "value": 7,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "insert() (33 lines)",
+          "line": 32
+        }
+      ],
+      "maintainabilityIndex": 54.61,
+      "ownership": {
+        "<global>": [
+          "insert",
+          "encode",
+          "decode",
+          "extract"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\steganography\\lsb.py",
+      "fileName": "lsb.py",
+      "fileStats": {
+        "loc": 85,
+        "comments": 11,
+        "blank": 15,
+        "commentRatio": 0.12941176470588237
+      },
+      "complexity": [
+        {
+          "name": "insert",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "extract",
+          "value": 5,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "encode",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "decode",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 62.38,
+      "ownership": {
+        "<global>": [
+          "insert",
+          "extract",
+          "encode",
+          "decode"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Store_emails_in_csv\\store_emails.py",
+      "fileName": "store_emails.py",
+      "fileStats": {
+        "loc": 118,
+        "comments": 16,
+        "blank": 26,
+        "commentRatio": 0.13559322033898305
+      },
+      "complexity": [
+        {
+          "name": "connect_to_mailbox",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "get_text",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "write_to_csv",
+          "value": 12,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "High complexity (>10)",
+            "Long Function",
+            "Deep Nesting"
+          ]
+        },
+        {
+          "name": "main",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "write_to_csv() (53 lines)",
+          "line": 44
+        },
+        {
+          "type": "Deep Nesting",
+          "message": "write_to_csv() (depth 5)",
+          "line": 44
+        }
+      ],
+      "maintainabilityIndex": 67.28,
+      "ownership": {
+        "<global>": [
+          "connect_to_mailbox",
+          "get_text",
+          "write_to_csv",
+          "main"
+        ]
+      },
+      "deadCode": [
+        "os (import)",
+        "status (variable)",
+        "res (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\String_search_from_multiple_files\\findstring.py",
+      "fileName": "findstring.py",
+      "fileStats": {
+        "loc": 33,
+        "comments": 2,
+        "blank": 8,
+        "commentRatio": 0.06060606060606061
+      },
+      "complexity": [
+        {
+          "name": "getfiles",
+          "value": 6,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 75.2,
+      "ownership": {
+        "<global>": [
+          "getfiles"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\telegram_bot\\main.py",
+      "fileName": "main.py",
+      "fileStats": {
+        "loc": 74,
+        "comments": 0,
+        "blank": 20,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "error_callback",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "start",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "coin",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "main",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 85.34,
+      "ownership": {
+        "<global>": [
+          "error_callback",
+          "start",
+          "coin",
+          "main"
+        ]
+      },
+      "deadCode": [
+        "cid (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Terminal_Based_Hangman_Game\\hangman.py",
+      "fileName": "hangman.py",
+      "fileStats": {
+        "loc": 183,
+        "comments": 27,
+        "blank": 26,
+        "commentRatio": 0.14754098360655737
+      },
+      "complexity": [
+        {
+          "name": "get_word",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "play",
+          "value": 16,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "High complexity (>10)",
+            "Long Function",
+            "Deep Nesting"
+          ]
+        },
+        {
+          "name": "display_hangman",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Long Function"
+          ]
+        },
+        {
+          "name": "main",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "play() (86 lines)",
+          "line": 16
+        },
+        {
+          "type": "Deep Nesting",
+          "message": "play() (depth 4)",
+          "line": 16
+        },
+        {
+          "type": "Long Function",
+          "message": "display_hangman() (66 lines)",
+          "line": 105
+        }
+      ],
+      "maintainabilityIndex": 63.0,
+      "ownership": {
+        "<global>": [
+          "get_word",
+          "play",
+          "display_hangman",
+          "main"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Terminal_progress_bar_with_images_resizing\\progress_bar_ with_images_resizing.py",
+      "fileName": "progress_bar_ with_images_resizing.py",
+      "fileStats": {
+        "loc": 30,
+        "comments": 0,
+        "blank": 7,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "Resize_image",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function Resize_image() (should be snake_case)",
+          "line": 7
+        }
+      ],
+      "maintainabilityIndex": 59.6,
+      "ownership": {
+        "<global>": [
+          "Resize_image"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Textfile_analysis\\textfile_analysis.py",
+      "fileName": "textfile_analysis.py",
+      "fileStats": {
+        "loc": 36,
+        "comments": 1,
+        "blank": 6,
+        "commentRatio": 0.027777777777777776
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 68.6,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\text_to_morse_code\\text_to_morse_code.py",
+      "fileName": "text_to_morse_code.py",
+      "fileStats": {
+        "loc": 42,
+        "comments": 2,
+        "blank": 5,
+        "commentRatio": 0.047619047619047616
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 82.66,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Text_to_speech\\txtToSpeech.py",
+      "fileName": "txtToSpeech.py",
+      "fileStats": {
+        "loc": 9,
+        "comments": 1,
+        "blank": 2,
+        "commentRatio": 0.1111111111111111
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Tic_tac_toe\\tic_tac_toe.py",
+      "fileName": "tic_tac_toe.py",
+      "fileStats": {
+        "loc": 35,
+        "comments": 3,
+        "blank": 2,
+        "commentRatio": 0.08571428571428572
+      },
+      "complexity": [
+        {
+          "name": "check_win",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 71.96,
+      "ownership": {
+        "<global>": [
+          "check_win"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Tic_tac_toe_with_ai\\tic-tac-toe-AI.py",
+      "fileName": "tic-tac-toe-AI.py",
+      "fileStats": {
+        "loc": 346,
+        "comments": 63,
+        "blank": 90,
+        "commentRatio": 0.18208092485549132
+      },
+      "complexity": [
+        {
+          "name": "default",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "rules",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "play",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "names",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "choice",
+          "value": 7,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "first_player",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "display_board",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "player_choice",
+          "value": 6,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "CompAI",
+          "value": 14,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "High complexity (>10)",
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "selectRandom",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "place_marker",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "space_check",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "full_board_check",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "win_check",
+          "value": 24,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "High complexity (>10)"
+          ]
+        },
+        {
+          "name": "delay",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Dead Code"
+          ]
+        },
+        {
+          "name": "replay",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function CompAI() (should be snake_case)",
+          "line": 95
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function selectRandom() (should be snake_case)",
+          "line": 128
+        }
+      ],
+      "maintainabilityIndex": 45.27,
+      "ownership": {
+        "<global>": [
+          "default",
+          "rules",
+          "play",
+          "names",
+          "choice",
+          "first_player",
+          "display_board",
+          "player_choice",
+          "CompAI",
+          "selectRandom",
+          "place_marker",
+          "space_check",
+          "full_board_check",
+          "win_check",
+          "delay",
+          "replay"
+        ]
+      },
+      "deadCode": [
+        "delay (function)",
+        "ent (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Time_to_load_website\\time_to_load_website.py",
+      "fileName": "time_to_load_website.py",
+      "fileStats": {
+        "loc": 31,
+        "comments": 7,
+        "blank": 8,
+        "commentRatio": 0.22580645161290322
+      },
+      "complexity": [
+        {
+          "name": "get_load_time",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 87.07,
+      "ownership": {
+        "<global>": [
+          "get_load_time"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Todo_app\\app.py",
+      "fileName": "app.py",
+      "fileStats": {
+        "loc": 67,
+        "comments": 0,
+        "blank": 15,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "index",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Dead Code"
+          ]
+        },
+        {
+          "name": "delete",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "update",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Dead Code"
+          ]
+        },
+        {
+          "name": "__repr__",
+          "value": 1,
+          "type": "method",
+          "class": "Todo",
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 50.28,
+      "ownership": {
+        "<global>": [
+          "index",
+          "delete",
+          "update"
+        ],
+        "Todo": [
+          "__repr__"
+        ]
+      },
+      "deadCode": [
+        "url_for (import)",
+        "content (variable)",
+        "completed (variable)",
+        "index (function)",
+        "update (function)",
+        "content (attribute)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Unique_words_in_a_file\\unique.py",
+      "fileName": "unique.py",
+      "fileStats": {
+        "loc": 35,
+        "comments": 9,
+        "blank": 10,
+        "commentRatio": 0.2571428571428571
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 92.14,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Unstructured Supplemenrary  Service Data\\ussdtim.py",
+      "fileName": "ussdtim.py",
+      "fileStats": {
+        "loc": 188,
+        "comments": 9,
+        "blank": 18,
+        "commentRatio": 0.047872340425531915
+      },
+      "complexity": [
+        {
+          "name": "BVN_checker",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "open_acct",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "upgrade_migrate",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "balance",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "transf",
+          "value": 7,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Deep Nesting"
+          ]
+        },
+        {
+          "name": "funds",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "options_menu",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "exit",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "log_in",
+          "value": 5,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function BVN_checker() (should be snake_case)",
+          "line": 20
+        },
+        {
+          "type": "Deep Nesting",
+          "message": "transf() (depth 4)",
+          "line": 96
+        }
+      ],
+      "maintainabilityIndex": 45.31,
+      "ownership": {
+        "<global>": [
+          "BVN_checker",
+          "open_acct",
+          "upgrade_migrate",
+          "balance",
+          "transf",
+          "funds",
+          "options_menu",
+          "exit",
+          "log_in"
+        ]
+      },
+      "deadCode": [
+        "bnk (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Website_blocker\\website_blocker.py",
+      "fileName": "website_blocker.py",
+      "fileStats": {
+        "loc": 18,
+        "comments": 0,
+        "blank": 4,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 61.47,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Website_blocker\\website_unblocker.py",
+      "fileName": "website_unblocker.py",
+      "fileStats": {
+        "loc": 17,
+        "comments": 0,
+        "blank": 4,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 63.95,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Web_page_summation\\app.py",
+      "fileName": "app.py",
+      "fileStats": {
+        "loc": 142,
+        "comments": 4,
+        "blank": 13,
+        "commentRatio": 0.028169014084507043
+      },
+      "complexity": [
+        {
+          "name": "parse_args",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "readCsv",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "writeCsv",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "processCsv",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Inconsistent Naming"
+          ]
+        },
+        {
+          "name": "main",
+          "value": 9,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Long Function"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function readCsv() (should be snake_case)",
+          "line": 42
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function writeCsv() (should be snake_case)",
+          "line": 59
+        },
+        {
+          "type": "Inconsistent Naming",
+          "message": "Function processCsv() (should be snake_case)",
+          "line": 82
+        },
+        {
+          "type": "Long Function",
+          "message": "main() (46 lines)",
+          "line": 93
+        }
+      ],
+      "maintainabilityIndex": 51.63,
+      "ownership": {
+        "<global>": [
+          "parse_args",
+          "readCsv",
+          "writeCsv",
+          "processCsv",
+          "main"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Web_page_summation\\utils\\comparison.py",
+      "fileName": "comparison.py",
+      "fileStats": {
+        "loc": 50,
+        "comments": 14,
+        "blank": 14,
+        "commentRatio": 0.28
+      },
+      "complexity": [
+        {
+          "name": "eval_rouges",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Long Function",
+            "Dead Code"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "eval_rouges() (35 lines)",
+          "line": 9
+        }
+      ],
+      "maintainabilityIndex": 100.0,
+      "ownership": {
+        "<global>": [
+          "eval_rouges"
+        ]
+      },
+      "deadCode": [
+        "eval_rouges (function)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Web_page_summation\\utils\\model.py",
+      "fileName": "model.py",
+      "fileStats": {
+        "loc": 131,
+        "comments": 0,
+        "blank": 10,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "__init__",
+          "value": 10,
+          "type": "method",
+          "class": "Model",
+          "issues": [
+            "Long Function",
+            "Many Parameters"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Class",
+          "message": "Model (126 lines)",
+          "line": 6
+        },
+        {
+          "type": "Long Function",
+          "message": "__init__() (125 lines)",
+          "line": 7
+        },
+        {
+          "type": "Many Parameters",
+          "message": "__init__() (6 parameters)",
+          "line": 7
+        }
+      ],
+      "maintainabilityIndex": 41.58,
+      "ownership": {
+        "Model": [
+          "__init__"
+        ]
+      },
+      "deadCode": [
+        "Model (class)",
+        "prediction (attribute)",
+        "update (attribute)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Web_page_summation\\utils\\prepare.py",
+      "fileName": "prepare.py",
+      "fileStats": {
+        "loc": 11,
+        "comments": 0,
+        "blank": 3,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 69.72,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Web_page_summation\\utils\\summarize.py",
+      "fileName": "summarize.py",
+      "fileStats": {
+        "loc": 30,
+        "comments": 0,
+        "blank": 3,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "summarize",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Dead Code"
+          ]
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 55.96,
+      "ownership": {
+        "<global>": [
+          "summarize"
+        ]
+      },
+      "deadCode": [
+        "summarize (function)",
+        "stop_words (attribute)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Web_page_summation\\utils\\test.py",
+      "fileName": "test.py",
+      "fileStats": {
+        "loc": 76,
+        "comments": 1,
+        "blank": 15,
+        "commentRatio": 0.013157894736842105
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 54.65,
+      "ownership": {},
+      "deadCode": [
+        "num_hidden (attribute)",
+        "num_layers (attribute)",
+        "beam_width (attribute)",
+        "glove (attribute)",
+        "embedding_size (attribute)",
+        "learning_rate (attribute)",
+        "num_epochs (attribute)",
+        "keep_prob (attribute)",
+        "with_model (attribute)",
+        "valid_x_len (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Web_page_summation\\utils\\train.py",
+      "fileName": "train.py",
+      "fileStats": {
+        "loc": 106,
+        "comments": 2,
+        "blank": 20,
+        "commentRatio": 0.018867924528301886
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 50.0,
+      "ownership": {},
+      "deadCode": [
+        "num_hidden (attribute)",
+        "num_layers (attribute)",
+        "beam_width (attribute)",
+        "glove (attribute)",
+        "embedding_size (attribute)",
+        "learning_rate (attribute)",
+        "keep_prob (attribute)",
+        "with_model (attribute)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Web_page_summation\\utils\\utils.py",
+      "fileName": "utils.py",
+      "fileStats": {
+        "loc": 118,
+        "comments": 5,
+        "blank": 27,
+        "commentRatio": 0.0423728813559322
+      },
+      "complexity": [
+        {
+          "name": "clean_str",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "get_text_list",
+          "value": 4,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "build_dict",
+          "value": 6,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Long Function",
+            "Dead Code"
+          ]
+        },
+        {
+          "name": "build_dataset",
+          "value": 13,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "High complexity (>10)",
+            "Dead Code"
+          ]
+        },
+        {
+          "name": "batch_iter",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Dead Code"
+          ]
+        },
+        {
+          "name": "get_init_embedding",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": [
+            "Dead Code"
+          ]
+        }
+      ],
+      "smells": [
+        {
+          "type": "Long Function",
+          "message": "build_dict() (32 lines)",
+          "line": 25
+        }
+      ],
+      "maintainabilityIndex": 50.67,
+      "ownership": {
+        "<global>": [
+          "clean_str",
+          "get_text_list",
+          "build_dict",
+          "build_dataset",
+          "batch_iter",
+          "get_init_embedding"
+        ]
+      },
+      "deadCode": [
+        "build_dict (function)",
+        "build_dataset (function)",
+        "batch_iter (function)",
+        "epoch (variable)",
+        "get_init_embedding (function)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Web_page_summation\\utils\\__init__.py",
+      "fileName": "__init__.py",
+      "fileStats": {
+        "loc": 0,
+        "comments": 0,
+        "blank": 0,
+        "commentRatio": 0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Web_scraping_a_youtube_comment\\webscrapindcomment.py",
+      "fileName": "webscrapindcomment.py",
+      "fileStats": {
+        "loc": 37,
+        "comments": 2,
+        "blank": 9,
+        "commentRatio": 0.05405405405405406
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\whatsapp_Bot\\main.py",
+      "fileName": "main.py",
+      "fileStats": {
+        "loc": 12,
+        "comments": 0,
+        "blank": 3,
+        "commentRatio": 0.0
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 100.0,
+      "ownership": {},
+      "deadCode": [
+        "chour (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Wifi_windows_password_displayer\\main.py",
+      "fileName": "main.py",
+      "fileStats": {
+        "loc": 62,
+        "comments": 6,
+        "blank": 10,
+        "commentRatio": 0.0967741935483871
+      },
+      "complexity": [
+        {
+          "name": "__init__",
+          "value": 2,
+          "type": "method",
+          "class": "PwdDisplay",
+          "issues": []
+        },
+        {
+          "name": "export_xml",
+          "value": 1,
+          "type": "method",
+          "class": "PwdDisplay",
+          "issues": []
+        },
+        {
+          "name": "file_path",
+          "value": 1,
+          "type": "method",
+          "class": "PwdDisplay",
+          "issues": []
+        },
+        {
+          "name": "get_ssid_pwd",
+          "value": 2,
+          "type": "method",
+          "class": "PwdDisplay",
+          "issues": []
+        },
+        {
+          "name": "display_password",
+          "value": 2,
+          "type": "method",
+          "class": "PwdDisplay",
+          "issues": []
+        },
+        {
+          "name": "__del__",
+          "value": 3,
+          "type": "method",
+          "class": "PwdDisplay",
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 68.63,
+      "ownership": {
+        "PwdDisplay": [
+          "__init__",
+          "export_xml",
+          "file_path",
+          "get_ssid_pwd",
+          "display_password",
+          "__del__"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Wikipedia_search_wordcloud\\wiki-search-cloud.py",
+      "fileName": "wiki-search-cloud.py",
+      "fileStats": {
+        "loc": 44,
+        "comments": 5,
+        "blank": 8,
+        "commentRatio": 0.11363636363636363
+      },
+      "complexity": [
+        {
+          "name": "gen_cloud",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "save_cloud",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "show_cloud",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 80.54,
+      "ownership": {
+        "<global>": [
+          "gen_cloud",
+          "save_cloud",
+          "show_cloud"
+        ]
+      },
+      "deadCode": [
+        "ImageColorGenerator (import)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Write_a_script_to_download_a_random_image_from_unsplash_and_set_it_as_wallpaper\\background_linux.py",
+      "fileName": "background_linux.py",
+      "fileStats": {
+        "loc": 27,
+        "comments": 1,
+        "blank": 8,
+        "commentRatio": 0.037037037037037035
+      },
+      "complexity": [
+        {
+          "name": "download",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "setup",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 98.54,
+      "ownership": {
+        "<global>": [
+          "download",
+          "setup"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\Write_a_script_to_download_a_random_image_from_unsplash_and_set_it_as_wallpaper\\background_windows.py",
+      "fileName": "background_windows.py",
+      "fileStats": {
+        "loc": 38,
+        "comments": 0,
+        "blank": 8,
+        "commentRatio": 0.0
+      },
+      "complexity": [
+        {
+          "name": "is_64bit",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "download",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "setup",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 76.33,
+      "ownership": {
+        "<global>": [
+          "is_64bit",
+          "download",
+          "setup"
+        ]
+      },
+      "deadCode": [
+        "version (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Write_script_to_compress_folder_and_files\\zipfiles.py",
+      "fileName": "zipfiles.py",
+      "fileStats": {
+        "loc": 52,
+        "comments": 9,
+        "blank": 11,
+        "commentRatio": 0.17307692307692307
+      },
+      "complexity": [
+        {
+          "name": "zip_file",
+          "value": 1,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "retrieve_file_paths",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "zip_dir",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 80.8,
+      "ownership": {
+        "<global>": [
+          "zip_file",
+          "retrieve_file_paths",
+          "zip_dir"
+        ]
+      },
+      "deadCode": [
+        "directories (variable)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Write_script_to_move_files_into_alphabetically_ordered_folder\\main.py",
+      "fileName": "main.py",
+      "fileStats": {
+        "loc": 75,
+        "comments": 3,
+        "blank": 14,
+        "commentRatio": 0.04
+      },
+      "complexity": [
+        {
+          "name": "getfoldername",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "readdirectory",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "createfolder",
+          "value": 3,
+          "type": "function",
+          "class": null,
+          "issues": []
+        },
+        {
+          "name": "movetofolder",
+          "value": 2,
+          "type": "function",
+          "class": null,
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 87.57,
+      "ownership": {
+        "<global>": [
+          "getfoldername",
+          "readdirectory",
+          "createfolder",
+          "movetofolder"
+        ]
+      },
+      "deadCode": []
+    },
+    {
+      "path": "python-mini-projects\\projects\\XKCD_downloader\\xkcd_dowloader.py",
+      "fileName": "xkcd_dowloader.py",
+      "fileStats": {
+        "loc": 41,
+        "comments": 6,
+        "blank": 10,
+        "commentRatio": 0.14634146341463414
+      },
+      "complexity": [],
+      "smells": [],
+      "maintainabilityIndex": 82.27,
+      "ownership": {},
+      "deadCode": [
+        "decode_content (attribute)"
+      ]
+    },
+    {
+      "path": "python-mini-projects\\projects\\Zip_Bruter\\zipbruter.py",
+      "fileName": "zipbruter.py",
+      "fileStats": {
+        "loc": 94,
+        "comments": 3,
+        "blank": 23,
+        "commentRatio": 0.031914893617021274
+      },
+      "complexity": [
+        {
+          "name": "__init__",
+          "value": 1,
+          "type": "method",
+          "class": "ZipBruter",
+          "issues": []
+        },
+        {
+          "name": "worker",
+          "value": 4,
+          "type": "method",
+          "class": "ZipBruter",
+          "issues": []
+        },
+        {
+          "name": "start_workers",
+          "value": 2,
+          "type": "method",
+          "class": "ZipBruter",
+          "issues": []
+        },
+        {
+          "name": "main",
+          "value": 3,
+          "type": "method",
+          "class": "ZipBruter",
+          "issues": []
+        },
+        {
+          "name": "read_wordlist",
+          "value": 2,
+          "type": "method",
+          "class": "ZipBruter",
+          "issues": []
+        }
+      ],
+      "smells": [],
+      "maintainabilityIndex": 71.35,
+      "ownership": {
+        "ZipBruter": [
+          "__init__",
+          "worker",
+          "start_workers",
+          "main",
+          "read_wordlist"
+        ]
+      },
+      "deadCode": []
+    }
+  ],
+  "summary": {
+    "totalFiles": 157,
+    "totalLines": 9609,
+    "totalClasses": 31,
+    "totalFunctions": 298,
+    "maintainabilityIndex": 64.44,
+    "reusabilityScore": 72.59,
+    "carbonFootprint": 6.33,
+    "smells": [
+      {
+        "type": "Long Functions",
+        "count": 31
+      },
+      {
+        "type": "Long Classes",
+        "count": 5
+      },
+      {
+        "type": "Many Parameters",
+        "count": 4
+      },
+      {
+        "type": "Deep Nesting",
+        "count": 8
+      },
+      {
+        "type": "Many Methods",
+        "count": 0
+      },
+      {
+        "type": "High Complexity",
+        "count": 11
+      },
+      {
+        "type": "Inconsistent Names",
+        "count": 29
+      },
+      {
+        "type": "Dead Code",
+        "count": 124
+      }
+    ]
+  }
+}

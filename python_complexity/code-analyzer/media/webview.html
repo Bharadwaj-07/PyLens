@@ -356,7 +356,29 @@
       
       // Code Smell Distribution Chart
       const smellCtx = document.getElementById('smellChart').getContext('2d');
+      // Compose smell types and counts, including Dead Code from issues
       const smellTypes = analysisData.summary.smells.map(s => s.type);
+      const smellCounts = analysisData.summary.smells.map(s => s.count);
+      // Calculate Dead Code count from issues
+      let deadCodeCount = 0;
+      analysisData.files.forEach(file => {
+        file.deadCode.forEach(dead => {
+          const deadCodeRegex = /(method|function|class|unused|never called|not used|never used|unreachable|variable|import)/i;
+          if (typeof dead === 'string' && deadCodeRegex.test(dead)) {
+            deadCodeCount++;
+          }
+        });
+      });
+      // If Dead Code exists, add or update it in the chart
+      let deadCodeIndex = smellTypes.findIndex(t => t.toLowerCase() === 'dead code');
+      if (deadCodeCount > 0) {
+        if (deadCodeIndex === -1) {
+          smellTypes.push('Dead Code');
+          smellCounts.push(deadCodeCount);
+        } else {
+          smellCounts[deadCodeIndex] = deadCodeCount;
+        }
+      }
       const smellColors = [
         '#e74c3c', // red
         '#f39c12', // orange
@@ -372,7 +394,7 @@
         data: {
           labels: smellTypes,
           datasets: [{
-            data: analysisData.summary.smells.map(s => s.count),
+            data: smellCounts,
             backgroundColor: smellTypes.map((_, i) => smellColors[i % smellColors.length]),
             borderWidth: 1
           }]
@@ -730,9 +752,12 @@
         }
       }
     });
-    // Add dead code (only if contains 'method')
+    // Add dead code (only if matches regex patterns)
     file.deadCode.forEach(dead => {
-      if (typeof dead === 'string' && dead.toLowerCase().includes('method')) {
+      // Use regex to intelligently identify dead code issues related to methods/functions/classes
+      // Example patterns: 'method', 'function', 'class', 'unused', 'never called', etc.
+      const deadCodeRegex = /(method|function|class|unused|never called|not used|never used|unreachable|variable|import)/i;
+      if (typeof dead === 'string' && deadCodeRegex.test(dead)) {
         const key = `dead|${file.path}|${dead}`;
         if (!seen.has(key) && !localSeen.has(key)) {
           seen.add(key);
@@ -847,4 +872,3 @@
   </script>
 </body>
 </html>
-`
