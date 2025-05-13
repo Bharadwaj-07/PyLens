@@ -53,7 +53,7 @@
 ### 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/PyLens.git
+git clone https://github.com/Bharadwaj-07/PyLens.git
 cd PyLens
 ```
 ### 2. **Install Dependencies**
