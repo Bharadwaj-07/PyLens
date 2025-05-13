@@ -674,56 +674,41 @@
   }
 
   function createFileExplorer() {
-    const explorer = document.getElementById('file-explorer');
-    const folders = {};
+  const explorer = document.getElementById('file-explorer');
+  const folders = {};
 
-    analysisData.files.forEach(file => {
-      const folder = getFolderStructure(file.path);
-      if (!folders[folder]) folders[folder] = [];
-      folders[folder].push(file);
+  analysisData.files.forEach(file => {
+    const folder = getFolderStructure(file.path);
+    if (!folders[folder]) folders[folder] = [];
+    folders[folder].push(file);
+  });
+
+  // Improved: visually appealing file explorer
+  let html = '<ul style="list-style:none;padding-left:0;">';
+  Object.entries(folders).forEach(([folder, files]) => {
+    html += `<li style="margin-bottom:10px;">
+      <div style="font-weight:600;font-size:1.08em;color:var(--primary);margin-bottom:4px;display:flex;align-items:center;">
+        <span style="margin-right:7px;">📁</span>${folder}
+      </div>
+      <ul style="list-style:none;padding-left:18px;">`;
+    files.forEach(file => {
+      const issueCount = (file.smells?.length || 0) + (file.deadCode?.length || 0);
+      const color = issueCount > 5 ? 'var(--danger)' : issueCount > 0 ? 'var(--warning)' : 'var(--success)';
+      html += `
+        <li style="display:flex;align-items:center;margin-bottom:4px;padding:6px 0;border-bottom:1px solid #f3f3f3;">
+          <span style="margin-right:7px;font-size:1.1em;">📄</span>
+          <span style="font-weight:500;">${file.fileName}</span>
+          <span style="font-size:0.9em;color:${color};margin-left:auto;background:rgba(52,152,219,0.07);border-radius:4px;padding:2px 8px;">
+            ${issueCount} issues, MI: ${file.maintainabilityIndex?.toFixed(2)}
+          </span>
+        </li>
+      `;
     });
-
-    let html = '<ul>';
-    Object.entries(folders).forEach(([folder, files]) => {
-      html += `<li><strong>${folder}</strong><ul>`;
-      files.forEach(file => {
-        const issueCount = (file.smells?.length || 0) + (file.deadCode?.length || 0);
-        const color = issueCount > 5 ? 'var(--danger)' : issueCount > 0 ? 'var(--warning)' : 'var(--success)';
-        html += `
-          <li>
-            
-              ${file.fileName}
-            </span>
-            <span style="font-size:0.8em;color:${color}">
-              (${issueCount} issues, MI: ${file.maintainabilityIndex?.toFixed(2)})
-            </span>
-          </li>
-        `;
-      });
-      html += '</ul></li>';
-    });
-    html += '</ul>';
-    explorer.innerHTML = html;
-  }
-
-  function loadFileInViewer(filePath) {
-    const selector = document.getElementById('fileSelector');
-    // Normalize both filePath and selector options for matching
-    const normalizedPath = normalizePath(filePath);
-    let found = false;
-    for (let i = 0; i < selector.options.length; i++) {
-      if (normalizePath(selector.options[i].value) === normalizedPath) {
-        selector.selectedIndex = i;
-        found = true;
-        break;
-      }
-    }
-    if (!found) {
-      selector.value = filePath; // fallback
-    }
-    switchTab('structure');
-    loadSelectedFile();
-  }
+    html += '</ul></li>';
+  });
+  html += '</ul>';
+  explorer.innerHTML = html;
+}
 
     // Create issues list
     function createIssuesList() {
@@ -838,20 +823,47 @@
     colorIdx++;
   });
 
+  // Improved: visually appealing issues list
   issuesContent.innerHTML = Object.entries(filteredIssuesByType)
     .map(([type, items]) => {
-      const color = typeColorMap[type] || 'var(--primary)';
+      // Use the same color as in code smell chart for this type if available
+      let color = typeColorMap[type] || 'var(--primary)';
+      // Try to match code smell color if type exists in summary.smells
+      const smellIdx = analysisData.summary.smells.findIndex(s => s.type === type);
+      if (smellIdx !== -1) {
+        // Use the same palette as in the chart
+        const smellColors = [
+          '#e74c3c', // red
+          '#f39c12', // orange
+          '#3498db', // blue
+          '#9b59b6', // purple
+          '#1abc9c', // teal
+          '#2ecc71', // green
+          '#e67e22', // dark orange
+          '#34495e'  // dark blue/gray
+        ];
+        color = smellColors[smellIdx % smellColors.length];
+      } else if (type.toLowerCase() === 'dead code') {
+        // Dead Code color matches its position in the chart
+        const smellTypes = analysisData.summary.smells.map(s => s.type);
+        let deadCodeIdx = smellTypes.findIndex(t => t.toLowerCase() === 'dead code');
+        if (deadCodeIdx === -1) deadCodeIdx = smellTypes.length; // fallback
+        const smellColors = [
+          '#e74c3c', '#f39c12', '#3498db', '#9b59b6', '#1abc9c', '#2ecc71', '#e67e22', '#34495e'
+        ];
+        color = smellColors[deadCodeIdx % smellColors.length];
+      }
       return `
-      <div class="card" style="margin-bottom: 15px;">
-        <h3>${type} (${items.length})</h3>
-        <ul>
+      <div class="card issue-type-card" style="margin-bottom: 18px; border-left: 8px solid ${color}; box-shadow: 0 2px 8px rgba(0,0,0,0.07);">
+        <h3 style="color:${color};margin-bottom:8px;letter-spacing:0.5px;">${type} <span style="font-size:0.8em;opacity:0.7;">(${items.length})</span></h3>
+        <ul style="list-style:none;padding-left:0;">
           ${items.map(item => `
-            <li>
-              <span style="color:${color};cursor:pointer;" 
-                    onclick="navigateToIssue('${item.file}', ${JSON.stringify(item.line)})">
-                ${item.file}${item.line !== 'N/A' ? `:${item.line}` : ''}
+            <li style="display:flex;align-items:center;padding:7px 0;border-bottom:1px solid #f0f0f0;">
+              <span style="flex:1;font-weight:600;color:${color};font-size:1.05em;">${item.message}</span>
+              <span style="background:#f4f4f4;color:#f99;border-radius:4px;padding:2px 8px;font-size:0.92em;font-weight:400;margin-left:12px;min-width:90px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.03);">
+                ${item.file.split(/[\\/]/).pop()}${item.line !== 'N/A' ? `:${item.line}` : ''}
               </span>
-              - ${item.message}
+              <span style="font-size:0.82em;color:#7bf;margin-left:10px;word-break:break-all;max-width:220px;overflow:hidden;text-overflow:ellipsis;">${item.file}</span>
             </li>
           `).join('')}
         </ul>
