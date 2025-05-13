@@ -57,14 +57,22 @@ git clone https://github.com/Bharadwaj-07/PyLens.git
 cd PyLens
 ```
 ### 2. **Install Dependencies**
-pip install -r Requirements.txt [ Run this command to install required dependencies ] pip3 install -r Requirements.txt
+```bash
+pip install -r Requirements.txt
+```
+[ Run this command to install required dependencies ] 
 
 ### 3. **Launch PyLens Extensions (VSCode)**
-- Open python complexity folder in vs code editor window (In the Terminal "code python_complexity")
+- Open python complexity folder in vs code editor window (In the Terminal)
+```bash
+code python_complexity
+```
 - Press F5 [ Enviornment/Developer Window will open ] 
 - Press ctrl + shift + p [ Command pallette will get open ] 
 - Select command [ Show python profiler / Profile notebook /Run python complexity checker ]
-
+- Show python profiler will run the current active file in the editor if it is a python file.
+- Profile notebook will profile the current jupyter notebook, the notebook should not have errors and also all the code should be compatible with python.
+- Run python complexity checker will prompt for a folder to select, after which it will profile all the python files in the directory.
 
 ## Team Contributions
 - **Pashaula Eswar Sai [ CS24M109 ]**: Designed and developed the Python Profiler extension, including the real-time dashboard and post-execution function report
