@@ -69,10 +69,10 @@ code python_complexity
 ```
 - Press F5 [ Enviornment/Developer Window will open ] 
 - Press ctrl + shift + p [ Command pallette will get open ] 
-- Select command [ Show python profiler / Profile notebook /Run python complexity checker ]
-- Show python profiler will run the current active file in the editor if it is a python file.
-- Profile notebook will profile the current jupyter notebook, the notebook should not have errors and also all the code should be compatible with python.
-- Run python complexity checker will prompt for a folder to select, after which it will profile all the python files in the directory.
+- Select command **[ Show Profiler Data / Profile Notebook /Run Python Complexity Checker ]**
+- **_Show Profiler Data_** will run the current active file in the editor if it is a python file.
+- **_Profile Notebook_** will profile the current jupyter notebook, the notebook should not have errors and also all the code should be compatible with python.
+- **_Run Python Complexity Checker_** will prompt for a folder to select, after which it will profile all the python files in the directory.
 
 ## Team Contributions
 - **Pashaula Eswar Sai [ CS24M109 ]**: Designed and developed the Python Profiler extension, including the real-time dashboard and post-execution function report
