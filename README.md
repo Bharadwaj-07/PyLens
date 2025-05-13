@@ -60,7 +60,7 @@ cd PyLens
 pip install -r Requirements.txt [ Run this command to install required dependencies ] pip3 install -r Requirements.txt
 
 ### 3. **Launch PyLens Extensions (VSCode)**
-- Open python complexity folder in vs code editor window 
+- Open python complexity folder in vs code editor window (In the Terminal "code python_complexity")
 - Press F5 [ Enviornment/Developer Window will open ] 
 - Press ctrl + shift + p [ Command pallette will get open ] 
 - Select command [ Show python profiler / Profile notebook /Run python complexity checker ]
